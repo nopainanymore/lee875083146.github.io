@@ -39,33 +39,28 @@ participant B<br>
 A-&gt;B: Normal line<br>
 A–&gt;B: Dashed line<br>
 A-&gt;&gt;B: Open arrow<br>
-A–&gt;&gt;: Dashed Open arrow</p>
+A–&gt;&gt;B: Dashed Open arrow</p>
 <h2 id="例子"><a class="markdownIt-Anchor" href="#例子"></a> 例子</h2>
+<p>渲染问题将·替换为`<br>
+···sequence<br>
+title: Sequence Demo<br>
+participant A as a<br>
+participant B as b<br>
+Note left of a: left Note<br>
+a-&gt;b: Normal line<br>
+b–&gt;a: Dashed line<br>
+a-&gt;&gt;b: Open arrow<br>
+b–&gt;&gt;a: Dashed Open arrow<br>
+···</p>
 <div id="sequence-0"></div>
-<pre class="highlight"><code class="markdown">(渲染问题将·替换为`)
-···sequence
-title: TCP Three-way Handshake
-participant Client as cl
-participant Server as se
-Note left of cl: choose init seq num,x send TCP SYN msg
-cl-&gt;se: SYNbit=1, seq=x
-Note right of se: choose init seq num,y send TCP SYN ACK msg, acking SYN
-se-&gt;cl: SYNbit=1, seq=y ACKbit=1; ACKnum=x+1
-Note left of cl: received SYNACK(x) indicates server is live; send ACK for SYNACK; this sqgment may contain client-to-server data
-cl-&gt;se: ACKbit=1, ACKnum=y+1
-Note right of se: received ACK(y) indicates client is live
-···
-<span class="code">```&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.27/webfontloader.js"&gt;&lt;/script&gt;&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"&gt;&lt;/script&gt;&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"&gt;&lt;/script&gt;&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"&gt;&lt;/script&gt;<textarea id="sequence-0-code" style="display: none">title: TCP Three-way Handshake
-participant Client as cl
-participant Server as se
-Note left of cl: choose init seq num,x send TCP SYN msg
-cl->se: SYNbit=1, seq=x
-Note right of se: choose init seq num,y send TCP SYN ACK msg, acking SYN
-se->cl: SYNbit=1, seq=y ACKbit=1; ACKnum=x+1
-Note left of cl: received SYNACK(x) indicates server is live; send ACK for SYNACK; this sqgment may contain client-to-server data
-cl->se: ACKbit=1, ACKnum=y+1
-Note right of se: received ACK(y) indicates client is live</textarea><textarea id="sequence-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("sequence-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-0-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-0", options);</script></span></code></pre>
-</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Lee</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://lee875083146.github.io/HexoBlog/2019/04/03/Markdown进阶语法学习——时序图/">https://lee875083146.github.io/HexoBlog/2019/04/03/Markdown进阶语法学习——时序图/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://lee875083146.github.io/HexoBlog">No Pain AnyMore</a>！</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/HexoBlog/tags/博客搭建/">博客搭建</a><a class="post-meta__tags" href="/HexoBlog/tags/Markdown/">Markdown</a></div><nav id="pagination"><div class="next-post pull-right"><a href="/HexoBlog/2019/03/29/SpringBoot集成MyBatis-Plus/"><span>SpringBoot集成MyBatis-Plus</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2019 By Lee</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/HexoBlog/js/utils.js?version=1.6.1"></script><script src="/HexoBlog/js/fancybox.js?version=1.6.1"></script><script src="/HexoBlog/js/sidebar.js?version=1.6.1"></script><script src="/HexoBlog/js/copy.js?version=1.6.1"></script><script src="/HexoBlog/js/fireworks.js?version=1.6.1"></script><script src="/HexoBlog/js/transition.js?version=1.6.1"></script><script src="/HexoBlog/js/scroll.js?version=1.6.1"></script><script src="/HexoBlog/js/head.js?version=1.6.1"></script><script src="/HexoBlog/js/search/algolia.js"></script><script>if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+<script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.27/webfontloader.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script><textarea id="sequence-0-code" style="display: none">title: Sequence Demo
+participant A as a
+participant B as b
+Note left of a: left Note
+a->b: Normal line
+b-->a: Dashed line
+a->>b: Open arrow
+b-->>a: Dashed Open arrow</textarea><textarea id="sequence-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("sequence-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-0-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-0", options);</script></div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Lee</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://lee875083146.github.io/HexoBlog/2019/04/03/Markdown进阶语法学习——时序图/">https://lee875083146.github.io/HexoBlog/2019/04/03/Markdown进阶语法学习——时序图/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://lee875083146.github.io/HexoBlog">No Pain AnyMore</a>！</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/HexoBlog/tags/博客搭建/">博客搭建</a><a class="post-meta__tags" href="/HexoBlog/tags/Markdown/">Markdown</a></div><nav id="pagination"><div class="next-post pull-right"><a href="/HexoBlog/2019/03/29/SpringBoot集成MyBatis-Plus/"><span>SpringBoot集成MyBatis-Plus</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2019 By Lee</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/HexoBlog/js/utils.js?version=1.6.1"></script><script src="/HexoBlog/js/fancybox.js?version=1.6.1"></script><script src="/HexoBlog/js/sidebar.js?version=1.6.1"></script><script src="/HexoBlog/js/copy.js?version=1.6.1"></script><script src="/HexoBlog/js/fireworks.js?version=1.6.1"></script><script src="/HexoBlog/js/transition.js?version=1.6.1"></script><script src="/HexoBlog/js/scroll.js?version=1.6.1"></script><script src="/HexoBlog/js/head.js?version=1.6.1"></script><script src="/HexoBlog/js/search/algolia.js"></script><script>if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
   $('#nav').addClass('is-mobile')
   $('footer').addClass('is-mobile')
 }</script><div class="search-dialog" id="algolia-search"><div class="search-dialog__title" id="algolia-search-title">Algolia</div><div id="algolia-input-panel"><div id="algolia-search-input"></div></div><hr><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-stats"></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>
