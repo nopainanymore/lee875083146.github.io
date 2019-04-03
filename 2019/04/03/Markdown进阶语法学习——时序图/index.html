@@ -1,0 +1,71 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta name="generator" content="Hexo 3.8.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="Markdown进阶语法学习——时序图"><meta name="keywords" content="博客搭建,Markdown"><meta name="author" content="Lee"><meta name="copyright" content="Lee"><title>Markdown进阶语法学习——时序图 | No Pain AnyMore</title><link rel="shortcut icon" href="http://ww1.sinaimg.cn/large/005yN1Nlgy1g0lee3rjxbj311s0scgpu.jpg"><link rel="stylesheet" href="/HexoBlog/css/index.css?version=1.6.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.6.1"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css?version=1.6.1"><link rel="dns-prefetch" href="https://cdn.staticfile.org"><link rel="dns-prefetch" href="https://cdn.bootcss.com"><link rel="dns-prefetch" href="https://creativecommons.org"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.1.1/dist/instantsearch.min.css"><script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.1.1/dist/instantsearch.min.js" defer></script><script>var GLOBAL_CONFIG = { 
+  root: '/HexoBlog/',
+  algolia: {"appId":"W8TS0H8GFA","apiKey":"364d9cee251c8999b406cc3393f74a54","indexName":"hexo","hits":{"per_page":10},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容:${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  }
+} </script></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="toggle-sidebar-info text-center"><span data-toggle="切换文章详情">切换站点概览</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#时序图"><span class="toc-number">1.</span> <span class="toc-text"> 时序图</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是时序图"><span class="toc-number">1.1.</span> <span class="toc-text"> 什么是时序图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#时序图的组成部分"><span class="toc-number">1.2.</span> <span class="toc-text"> 时序图的组成部分</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#markdown时序图语法"><span class="toc-number">2.</span> <span class="toc-text"> Markdown时序图语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#标题"><span class="toc-number">2.1.</span> <span class="toc-text"> 标题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参与者"><span class="toc-number">2.2.</span> <span class="toc-text"> 参与者</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#消息"><span class="toc-number">2.3.</span> <span class="toc-text"> 消息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#动作"><span class="toc-number">2.4.</span> <span class="toc-text"> 动作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#例子"><span class="toc-number">3.</span> <span class="toc-text"> 例子</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="http://ww1.sinaimg.cn/large/005yN1Nlgy1g0lee3rjxbj311s0scgpu.jpg"></div><div class="author-info__name text-center">Lee</div><div class="author-info__description text-center"></div><div class="follow-button"><a href="https://github.com/Lee875083146">GitHub</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/HexoBlog/archives"><span class="pull-left">文章</span><span class="pull-right">12</span></a><a class="author-info-articles__tags article-meta" href="/HexoBlog/tags"><span class="pull-left">标签</span><span class="pull-right">13</span></a><a class="author-info-articles__categories article-meta" href="/HexoBlog/categories"><span class="pull-left">分类</span><span class="pull-right">13</span></a></div></div></div><div id="content-outer"><div class="plain" id="top-container"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/HexoBlog/">No Pain AnyMore</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> 搜索</span></a><a class="site-page" href="/HexoBlog">主页</a><a class="site-page" href="/HexoBlog/archives">归档</a><a class="site-page" href="/HexoBlog/tags">标签</a><a class="site-page" href="/HexoBlog/categories">分类</a><a class="site-page" href="/HexoBlog/learningPlan">学习规划</a><a class="site-page" href="/HexoBlog/about">关于</a></span></div></div><div class="layout" id="content-inner"><article id="post"><div class="plain" id="post-title">Markdown进阶语法学习——时序图</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2019-04-03</time><span class="post-meta__separator">|</span><i class="fa fa-inbox" aria-hidden="true"></i><a class="post-meta__categories" href="/HexoBlog/categories/博客搭建/"> 博客搭建</a><i class="fa fa-angle-right post-meta__separator" aria-hidden="true"></i><i class="fa fa-inbox" aria-hidden="true"></i><a class="post-meta__categories" href="/HexoBlog/categories/博客搭建/Markdown/"> Markdown</a></div><div class="article-container" id="post-content"><p>介绍如何使用Markdown绘制时序图。</p>
+<a id="more"></a>
+<h2 id="时序图"><a class="markdownIt-Anchor" href="#时序图"></a> 时序图</h2>
+<h3 id="什么是时序图"><a class="markdownIt-Anchor" href="#什么是时序图"></a> 什么是时序图</h3>
+<blockquote>
+<p>时序图(Sequence Diagram)，又名序列图、循序图，是一种UML交互图。它通过描述对象之间发送消息的时间顺序显示多个对象之间的动态协作。它可以表示用例的行为顺序，当执行一个用例行为时，其中的每条消息对应一个类操作或状态机中引起转换的触发事件。</p>
+</blockquote>
+<h3 id="时序图的组成部分"><a class="markdownIt-Anchor" href="#时序图的组成部分"></a> 时序图的组成部分</h3>
+<ul>
+<li>对象(Object)，对象代表时序图中的对象在交互中所扮演的角色，位于时序图顶部和对象代表类角色。</li>
+<li>生命线(Lifeline)，生命线代表时序图中的对象在一段时期内的存在。时序图中每个对象和底部中心都有一条垂直的虚线，这就是对象的生命线，对象间 的消息存在于两条虚线间。</li>
+<li>控制焦点(Activation)，控制焦点代表时序图中的对象执行一项操作的时期，在时序图中每条生命线上的窄的矩形代表活动期。</li>
+<li>消息(Message)，消息是定义交互和协作中交换信息的类，用于对实体间的通信内容建模，信息用于在实体间传递信息。允许实体请求其他的服务，类角色通过发送和接受信息进行通信。</li>
+</ul>
+<h2 id="markdown时序图语法"><a class="markdownIt-Anchor" href="#markdown时序图语法"></a> Markdown时序图语法</h2>
+<h3 id="标题"><a class="markdownIt-Anchor" href="#标题"></a> 标题</h3>
+<p>title： this is title</p>
+<h3 id="参与者"><a class="markdownIt-Anchor" href="#参与者"></a> 参与者</h3>
+<p>participant A</p>
+<h3 id="消息"><a class="markdownIt-Anchor" href="#消息"></a> 消息</h3>
+<p>participant A<br>
+participant B<br>
+Note left of A: left Note<br>
+Note Over A: over Note<br>
+Note right of A: right Note<br>
+Note Over A,B: Note over both A and B</p>
+<h3 id="动作"><a class="markdownIt-Anchor" href="#动作"></a> 动作</h3>
+<p>participant A<br>
+participant B<br>
+A-&gt;B: Normal line<br>
+A–&gt;B: Dashed line<br>
+A-&gt;&gt;B: Open arrow<br>
+A–&gt;&gt;: Dashed Open arrow</p>
+<h2 id="例子"><a class="markdownIt-Anchor" href="#例子"></a> 例子</h2>
+<div id="sequence-0"></div>
+<pre class="highlight"><code class="markdown">(渲染问题将·替换为`)
+···sequence
+title: TCP Three-way Handshake
+participant Client as cl
+participant Server as se
+Note left of cl: choose init seq num,x send TCP SYN msg
+cl-&gt;se: SYNbit=1, seq=x
+Note right of se: choose init seq num,y send TCP SYN ACK msg, acking SYN
+se-&gt;cl: SYNbit=1, seq=y ACKbit=1; ACKnum=x+1
+Note left of cl: received SYNACK(x) indicates server is live; send ACK for SYNACK; this sqgment may contain client-to-server data
+cl-&gt;se: ACKbit=1, ACKnum=y+1
+Note right of se: received ACK(y) indicates client is live
+···
+<span class="code">```&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.27/webfontloader.js"&gt;&lt;/script&gt;&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"&gt;&lt;/script&gt;&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"&gt;&lt;/script&gt;&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"&gt;&lt;/script&gt;<textarea id="sequence-0-code" style="display: none">title: TCP Three-way Handshake
+participant Client as cl
+participant Server as se
+Note left of cl: choose init seq num,x send TCP SYN msg
+cl->se: SYNbit=1, seq=x
+Note right of se: choose init seq num,y send TCP SYN ACK msg, acking SYN
+se->cl: SYNbit=1, seq=y ACKbit=1; ACKnum=x+1
+Note left of cl: received SYNACK(x) indicates server is live; send ACK for SYNACK; this sqgment may contain client-to-server data
+cl->se: ACKbit=1, ACKnum=y+1
+Note right of se: received ACK(y) indicates client is live</textarea><textarea id="sequence-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("sequence-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-0-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-0", options);</script></span></code></pre>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Lee</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://lee875083146.github.io/HexoBlog/2019/04/03/Markdown进阶语法学习——时序图/">https://lee875083146.github.io/HexoBlog/2019/04/03/Markdown进阶语法学习——时序图/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://lee875083146.github.io/HexoBlog">No Pain AnyMore</a>！</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/HexoBlog/tags/博客搭建/">博客搭建</a><a class="post-meta__tags" href="/HexoBlog/tags/Markdown/">Markdown</a></div><nav id="pagination"><div class="next-post pull-right"><a href="/HexoBlog/2019/03/29/SpringBoot集成MyBatis-Plus/"><span>SpringBoot集成MyBatis-Plus</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2019 By Lee</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/HexoBlog/js/utils.js?version=1.6.1"></script><script src="/HexoBlog/js/fancybox.js?version=1.6.1"></script><script src="/HexoBlog/js/sidebar.js?version=1.6.1"></script><script src="/HexoBlog/js/copy.js?version=1.6.1"></script><script src="/HexoBlog/js/fireworks.js?version=1.6.1"></script><script src="/HexoBlog/js/transition.js?version=1.6.1"></script><script src="/HexoBlog/js/scroll.js?version=1.6.1"></script><script src="/HexoBlog/js/head.js?version=1.6.1"></script><script src="/HexoBlog/js/search/algolia.js"></script><script>if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+}</script><div class="search-dialog" id="algolia-search"><div class="search-dialog__title" id="algolia-search-title">Algolia</div><div id="algolia-input-panel"><div id="algolia-search-input"></div></div><hr><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-stats"></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>
