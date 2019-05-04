@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://lee875083146.github.io/HexoBlog/2019/05/04/Spring-AOP/</loc>
+    
+    <lastmod>2019-05-04T11:24:54.523Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://lee875083146.github.io/HexoBlog/2019/04/14/Embrace-Lombok/</loc>
     
     <lastmod>2019-05-04T11:15:34.868Z</lastmod>
@@ -131,13 +138,6 @@
     <loc>https://lee875083146.github.io/HexoBlog/2019/04/23/Java-IO-Stream/</loc>
     
     <lastmod>2019-05-04T10:46:19.170Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lee875083146.github.io/HexoBlog/2019/05/04/Spring-AOP/</loc>
-    
-    <lastmod>2019-05-04T10:45:53.884Z</lastmod>
     
   </url>
   
