@@ -148,10 +148,10 @@ CGLibProxy代理类需要实现一个方法拦截器接口`MethodInterceptor`并
 ## SpringBoot 中使用AOP
 ### 引入依赖
 ```xml
-		<dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-aop</artifactId>
-        </dependency>
+<dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-aop</artifactId>
+</dependency>
 ```
 ### 使用Aspect注解实现切面
 ```java
