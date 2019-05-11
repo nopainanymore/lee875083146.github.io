@@ -26,7 +26,7 @@ Pom中加入以下依赖：
 ```
 ### IDEA安装插件
 在Settings的Plugins搜索并安装Lombok插件。
-![IDEA 安装插件](http://i2.bvimg.com/686156/808dae1bf3746e4e.png)
+![IDEA 安装插件](https://ws1.sinaimg.cn/large/0078YTE8gy1g22jig6bnnj30zh0nlq4o.jpg "IDEA-Lombok-plugin")
 
 ## Lombok使用
 ### `@Getter`，`@Setter`

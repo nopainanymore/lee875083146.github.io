@@ -33,7 +33,7 @@ categories:
 Java8中引入了`java.util.Optional`类处理null，Optional类是一个容器对象，包含了一个可能为null也可能不为null的对象。
 
 ### 介绍
-![Optional Diagrams](http://i2.bvimg.com/686156/e77d5e1aaf207766.png "Optional Diagrams")
+![Optional Diagrams](https://ws1.sinaimg.cn/large/005yN1Nlgy1g1l98ll6klj30gv0f0t97.jpg "Optional Diagrams")
 
 方法|描述|作用
 :-|:-|-
