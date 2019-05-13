@@ -117,3 +117,41 @@ public final class LambdaExceptionUtil {
 
 }
 ```
+
+## 如何使用
+
+引入工具类之前：
+![Befre](https://ws1.sinaimg.cn/large/0078YTE8gy1g301gcdztpj30w902c74y.jpg)
+
+引入工具类之后：
+![After](https://ws1.sinaimg.cn/large/0078YTE8gy1g301ia6dpyj3176081adx.jpg)
+
+代码：
+```java
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+/**
+ * java8: LambdaExceptionExample
+ *
+ * @author NoPainAnymore
+ * @date 2019-05-13 21:53
+ */
+public class LambdaExceptionExample {
+
+    public static void main(String[] args) throws ClassNotFoundException {
+
+        List<String> clazzNameList = new ArrayList<>();
+        clazzNameList.add("class0");
+        clazzNameList.add("class1");
+
+        List<? extends Class<?>> collect = clazzNameList.stream().map(clazz -> Class.forName(clazz)).collect(Collectors.toList());
+
+        List<? extends Class<?>> collect1 = clazzNameList.stream().map(LambdaExceptionUtil.rethrowFunction(clazz -> Class.forName(clazz))).collect(Collectors.toList());
+        
+
+    }
+}
+
+```
