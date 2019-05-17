@@ -35,7 +35,7 @@ menu:
 
 # Favicon
 # ---------------
-favicon: http://i2.bvimg.com/686156/ad33f9f4cc5244ba.jpg
+favicon: https://nopainanymore.oss-cn-hangzhou.aliyuncs.com/favicon.jpg?x-oss-process=style/sw-white
 
 # PWA
 # See https://github.com/JLHwung/hexo-offline
@@ -63,7 +63,7 @@ code_word_wrap: true
 # ---------------
 social:
   github fab: https://github.com/Lee875083146
-  wechat fab: http://i2.bvimg.com/686156/fa39ac9d84166a70.jpg
+  wechat fab: https://nopainanymore.oss-cn-hangzhou.aliyuncs.com/wechat.jpg?x-oss-process=style/sw-white
 
 # icon_name fab: url
 
@@ -185,7 +185,7 @@ slide:
 
 QR_code:
 - itemlist:
-    img: https://nopainanymore.oss-cn-hangzhou.aliyuncs.com/wechat.jpg
+    img: https://nopainanymore.oss-cn-hangzhou.aliyuncs.com/wechat.jpg?x-oss-process=style/sw-white
     text: wechat
 
 # adv:
