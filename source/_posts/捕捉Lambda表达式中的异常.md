@@ -121,10 +121,10 @@ public final class LambdaExceptionUtil {
 ## 如何使用
 
 引入工具类之前：
-![Befre](https://ws1.sinaimg.cn/large/0078YTE8gy1g301gcdztpj30w902c74y.jpg)
+![LambdaExceptionBefore](https://nopainanymore.oss-cn-hangzhou.aliyuncs.com/java8/LambdaExceptionBefore.png?x-oss-process=style/sw-white "LambdaExceptionBefore")
 
 引入工具类之后：
-![After](https://ws1.sinaimg.cn/large/0078YTE8gy1g301ia6dpyj3176081adx.jpg)
+![LambdaExceptionAfter](https://nopainanymore.oss-cn-hangzhou.aliyuncs.com/java8/LambdaExceptionAfter.png?x-oss-process=style/sw-white "LambdaExceptionAfter")
 
 代码：
 ```java
