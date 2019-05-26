@@ -1,8 +1,8 @@
 ---
-title: Java8Stream(2)——如何使用Stream
-entitle: Java8-Stream-useage
+title: Java8如何使用Stream
+entitle: Java8-Stream-usage
 date: 2019-03-17 11:57:53
-tags: [Java,Java8,Steram]
+tags: [Java,Java8,Stream]
 categories:
 - Java
 - Java8

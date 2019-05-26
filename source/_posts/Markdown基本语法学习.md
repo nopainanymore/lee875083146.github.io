@@ -192,7 +192,8 @@ Markdown
 title是图片的标题，当鼠标移到图片上时显示的内容。title可加可不加
 ![我的头像](http://ww1.sinaimg.cn/large/005yN1Nlgy1g0lee3rjxbj311s0scgpu.jpg "我的头像")
 ```
-![我的头像](http://ww1.sinaimg.cn/large/005yN1Nlgy1g0lee3rjxbj311s0scgpu.jpg "我的头像")
+![我的头像](https://nopainanymore.oss-cn-hangzhou.aliyuncs.com/favicon.jpg?x-oss-process=style/sw-white "我的头像")
 
 
 [^1]:上标举例
+

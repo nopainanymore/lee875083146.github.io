@@ -25,12 +25,12 @@ theme_color:
 
 # Main menu navigation
 menu:
-  主页: /
-  归档: /archives
-  标签: /tags
-  分类: /categories
-  学习规划: /learningPlan
-  关于: /about
+  Home: /
+  Archives: /archives
+  Tags: /tags
+  Categories: /categories
+  LearningPlan: /learningPlan
+  About: /about
   #XXX: /xxx
 
 # Favicon

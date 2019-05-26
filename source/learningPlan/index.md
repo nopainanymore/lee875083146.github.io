@@ -15,22 +15,25 @@ date: 2019-03-12 23:24:19
 # Java
 ## Java8
 ### Optional
+{% post_link 使用Optional避免NPE %}
 ### Stream
 
+{% post_link Java8Stream介绍 %}
 
+{% post_link Java8如何使用Stream %}
 
 # Redis缓存
 
 
-# 面向对象
-## 设计模式
+# 设计模式
+{% post_link 设计模式大纲 %}
 
 
 
 # SpringBoot
-内容|是否完成|地址
-AOP|√|
-IOC|×|
+## AOP
+{% post_link SpringAOP实现原理 %}
+## IOC
 
 
 

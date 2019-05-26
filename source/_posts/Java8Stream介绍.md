@@ -1,5 +1,5 @@
 ---
-title: Java8Stream(1)——Stream介绍
+title: Java8Stream介绍
 entitle: Java8-Stream-Introduction
 date: 2019-03-16 02:29:38
 tags: [Java,Java8,Stream]

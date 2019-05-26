@@ -8,14 +8,15 @@ subtitle:
 description:
 keywords:
 author: Lee
-language: zh-Hans
+language: en
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://nopainanymore.me
 root: /
-permalink: :year/:month/:day/:entitle/
+permalink: :entitle/
+# permalink: :year/:month/:day/:entitle/
 permalink_defaults: 
 
 
