@@ -12,7 +12,7 @@ Hexo部署到GitPage后绑定博客到自有域名。
 <!--more-->
 
 ## 挑选域名
-首先挑选自己想要的域名，推荐使用[NameBeta](https://namebeta.com/)查询域名是否占用及那些服务商提供折扣。同时NameBeta支持[Chrome插件](https://chrome.google.com/webstore/detail/namebeta-smart-domain-too/opndpgdlkdoeiajepgfdnjedknaohhmg)查询。
+首先挑选自己想要的域名，推荐使用[NameBeta](https://namebeta.com/)查询域名是否占用及哪些服务商提供折扣。同时NameBeta支持[Chrome插件](https://chrome.google.com/webstore/detail/namebeta-smart-domain-too/opndpgdlkdoeiajepgfdnjedknaohhmg)查询。
 
 ![NameBetaWeb](https://nopainanymore.oss-cn-hangzhou.aliyuncs.com/GitPages/NameBetaWeb.PNG?x-oss-process=style/sw-white "NameBeta网页")
 
