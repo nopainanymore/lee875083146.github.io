@@ -142,8 +142,8 @@ public class CGLibProxy implements MethodInterceptor {
         proxy.createProxy().execute();
     }
 ```
-CGLibProxy代理类需要实现一个方法拦截器接口`MethodInterceptor`并重写`intercept`方法，类似JDK动态代理的`InvocationHandler`接口，也是理解为回调函数，同理每次调用代理对象的方法时，`intercept`方法都会被调用，利用该方法便可以在运行时对方法执行前后进行动态增强。代理对象创建则通过`Enhancer`类来设置的，`Enhancer`是一个用于产生代理对象的类，作用类似JDK的Proxy类，因为CGLib底层是通过继承实现的动态代理，因此需要传递目标对象的Class，同时需要设置一个回调函数对调用方法进行拦截并进行相应处理，最后通过create()创建目标对象的代理对象。
-在Spring AOP中，当有接口时会自动选择JDK动态代理技术，如果没有则选择CGLIB技术。
+CGLibProxy代理类需要实现一个方法拦截器接口`MethodInterceptor`并重写`intercept`方法，类似JDK动态代理的`InvocationHandler`接口，也是理解为回调函数，同理每次调用代理对象的方法时，`ntercept`方法都会被调用，利用该方法便可以在运行时对方法执行前后进行动态增强。代理对象创建则通过`Enhancer`类来设置的，`Enhancer`是一个用于产生代理对象的类，作用类似JDK的Proxy类，因为CGLib底层是通过继承实现的动态代理，因此需要传递目标对象的Class，同时需要设置一个回调函数对调用方法进行拦截并进行相应处理，最后通过create()创建目标对象的代理对象。
+在Spring AOP中，当有接口时会自动选择JDK动态代理技术，如果没有则选择CGLIB技术
 
 ## SpringBoot 中使用AOP
 ### 引入依赖
