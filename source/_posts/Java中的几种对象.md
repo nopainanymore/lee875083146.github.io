@@ -11,18 +11,24 @@ entitle: Java-POJO
 介绍Java中的POJO对象，
 <!--more-->
 
-
-
-
 ## POJO的起源
 
+POJO——Plain Old Java Object，是一个简单普通的Java对象，不被任意特殊的限制所约束，并且与类路径无关。
+>In software engineering, a Plain Old Java Object (POJO) is an ordinary Java object, not bound by any special restriction and not requiring any class path.
 
-POJO——Plain Old Java Object，
+这个概念出自MartinFowler博客。该术语是在他与Rebecca Parsons、Josh MacKenzie讨论的过程中产生的。在讨论中，他们指出将业务逻辑赋予给Java对象比使用实体Bean有更多的好处。他们好奇为什么人们反对在系统中使用普通的对象，归结为简单对象缺少一个时髦的名字，所以他们给了一个名字出来，结果非常的好。
+
 ><https://www.martinfowler.com/bliki/POJO.html>
 >The term was coined while Rebecca Parsons, Josh MacKenzie and I were preparing for a talk at a conference in September 2000. In the talk we were pointing out the many benefits of encoding business logic into regular java objects rather than using Entity Beans. We wondered why people were so against using regular objects in their systems and concluded that it was because simple objects lacked a fancy name. So we gave them one, and it's caught on very nicely.
 
->
->Ideally speaking, a POJO is a Java object not bound by any restriction other than those forced >by the Java Language Specification; i.e. a POJO should not have to
+以下是维基百科中关于POJO的定义：
+1. POJO不能继承预先制定的别的类
+2. POJO不能实现预先制定的接口
+3. POJO不能被预先制定的注解标注
+
+但是由于技术困难和其他一些原因，一些被称为符合POJO的软件产品或者框架仍然需要为了某些特性使用预先指定的一些注解，例如持久化等功能。所以如果在被任何注解注释前一个类是一个POJO对象，并且这个类在移除注解之后仍然能够被视作一个POJO。那么基本对象仍是POJO，因为它没有特殊的特性使其成为专用的Java对象。
+><https://en.wikipedia.org/wiki/Plain_old_Java_object>
+>Ideally speaking, a POJO is a Java object not bound by any restriction other than those forced >by the Java Language Specification; i.e. a POJO should **not** have to
 >Extend prespecified classes, as in
 >```
 >public class Foo extends javax.servlet.http.HttpServlet { ...
