@@ -1,6 +1,6 @@
 ---
 title: Java中的几种对象
-tags: [Java,POJO,PO,VO,DTO,AO,BO,DAO]
+tags: [Java,POJO,PO,VO,DTO,AO,BO]
 categories:
 - JAVA
 - POJO
@@ -14,6 +14,7 @@ entitle: Java-POJO
 ## POJO的起源
 
 POJO——Plain Old Java Object，是一个简单普通的Java对象，不被任意特殊的限制所约束，并且与类路径无关。
+
 >In software engineering, a Plain Old Java Object (POJO) is an ordinary Java object, not bound by any special restriction and not requiring any class path.
 
 这个概念出自MartinFowler博客。该术语是在他与Rebecca Parsons、Josh MacKenzie讨论的过程中产生的。在讨论中，他们指出将业务逻辑赋予给Java对象比使用实体Bean有更多的好处。他们好奇为什么人们反对在系统中使用普通的对象，归结为简单对象缺少一个时髦的名字，所以他们给了一个名字出来，结果非常的好。
@@ -47,17 +48,27 @@ However, due to technical difficulties and other reasons, many software products
 
 ## PO
 
-## DAO
+PO——Persistant Object，用于表示数据库中的一条记录映射成的Java对象，PO仅仅用于表示数据，没有任何的数据操作。
 
 ## VO
 
+VO——Value Object，用于表示一个与前端交互的Java对象，VO中不包含后段的敏感数据，例如数据库的自增字段等。
+
 ## DTO
 
+DTO——Data Transfer Object，用于表示一个数据传输对象，DTO一般用于不同服务层之间传输数据。
+
 ## BO
+
+BO——Business Object，用于表示一个业务对象，BO中包括了业务逻辑，常常封装了对DAO、RPC等的调用。
+
+## 总结
+
+对于这些对象，个人认为没有必要去纠结，更多的应该对业务本身进行分析建模，划分业务中的对象。
 
 
 
 ## 参考资料
 <https://en.wikipedia.org/wiki/Plain_old_Java_object>
 <https://www.cnblogs.com/firstdream/archive/2012/04/13/2445582.html>
-
+<https://www.zhihu.com/question/39651928>
