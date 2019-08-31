@@ -9,6 +9,7 @@ date: 2019-08-19 10:06:42
 entitle: Elasticsearch-DSL-Aggregation
 ---
 
+DSL中聚合的基础概念。
 <!--more-->
 
 ## 基础概念
