@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://nopainanymore.me/DesignPattern-Delegate/</loc>
+    <lastmod>2019-08-31</lastmod>
+  </url>  <url>
     <loc>http://nopainanymore.me/DesignPattern-Singleton/</loc>
     <lastmod>2019-08-31</lastmod>
   </url>  <url>
@@ -8,9 +11,6 @@
     <lastmod>2019-08-31</lastmod>
   </url>  <url>
     <loc>http://nopainanymore.me/Spring-IOC/</loc>
-    <lastmod>2019-08-31</lastmod>
-  </url>  <url>
-    <loc>http://nopainanymore.me/DesignPattern-Delegate/</loc>
     <lastmod>2019-08-31</lastmod>
   </url>  <url>
     <loc>http://nopainanymore.me/Elasticsearch-DSL-Aggregation/</loc>
@@ -34,10 +34,10 @@
     <loc>http://nopainanymore.me/Markdown-Grammer/</loc>
     <lastmod>2019-08-15</lastmod>
   </url>  <url>
-    <loc>http://nopainanymore.me/Markdown-Sequence/</loc>
+    <loc>http://nopainanymore.me/Markdowm-Flow/</loc>
     <lastmod>2019-08-15</lastmod>
   </url>  <url>
-    <loc>http://nopainanymore.me/Markdowm-Flow/</loc>
+    <loc>http://nopainanymore.me/Markdown-Sequence/</loc>
     <lastmod>2019-08-15</lastmod>
   </url>  <url>
     <loc>http://nopainanymore.me/OOP-Understanding/</loc>
@@ -58,31 +58,31 @@
     <loc>http://nopainanymore.me/DesignPattern-Proxy/</loc>
     <lastmod>2019-08-15</lastmod>
   </url>  <url>
-    <loc>http://nopainanymore.me/CleanCode-Bloated/</loc>
-    <lastmod>2019-08-15</lastmod>
-  </url>  <url>
-    <loc>http://nopainanymore.me/Building-Microservices-Microservices/</loc>
-    <lastmod>2019-08-15</lastmod>
-  </url>  <url>
     <loc>http://nopainanymore.me/Building-Microservices-TheEvolutionaryArchitect/</loc>
-    <lastmod>2019-08-15</lastmod>
-  </url>  <url>
-    <loc>http://nopainanymore.me/Building-Microservices-HowToModelServices/</loc>
     <lastmod>2019-08-15</lastmod>
   </url>  <url>
     <loc>http://nopainanymore.me/IDEA-Settings/</loc>
     <lastmod>2019-08-15</lastmod>
   </url>  <url>
+    <loc>http://nopainanymore.me/Building-Microservices-Microservices/</loc>
+    <lastmod>2019-08-15</lastmod>
+  </url>  <url>
+    <loc>http://nopainanymore.me/Building-Microservices-HowToModelServices/</loc>
+    <lastmod>2019-08-15</lastmod>
+  </url>  <url>
+    <loc>http://nopainanymore.me/Hexo-Github-Domain/</loc>
+    <lastmod>2019-08-15</lastmod>
+  </url>  <url>
     <loc>http://nopainanymore.me/Cache-concept/</loc>
     <lastmod>2019-08-15</lastmod>
   </url>  <url>
-    <loc>http://nopainanymore.me/SpringBoot-HandlerMethodArgumentResolver/</loc>
+    <loc>http://nopainanymore.me/CleanCode-Bloated/</loc>
     <lastmod>2019-08-15</lastmod>
   </url>  <url>
     <loc>http://nopainanymore.me/Java8-Stream-Introduction/</loc>
     <lastmod>2019-08-15</lastmod>
   </url>  <url>
-    <loc>http://nopainanymore.me/Hexo-Github-Domain/</loc>
+    <loc>http://nopainanymore.me/SpringBoot-HandlerMethodArgumentResolver/</loc>
     <lastmod>2019-08-15</lastmod>
   </url>  <url>
     <loc>http://nopainanymore.me/Java-ClassLoader/</loc>
