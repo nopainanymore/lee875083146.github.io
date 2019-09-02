@@ -86,6 +86,13 @@
   </url>
   
   <url>
+    <loc>http://nopainanymore.me/SpringBoot-ApplicationContext-Bean-Util/</loc>
+    
+    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://nopainanymore.me/Markdowm-Flow/</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
@@ -94,13 +101,6 @@
   
   <url>
     <loc>http://nopainanymore.me/OOP-Understanding/</loc>
-    
-    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://nopainanymore.me/SpringBoot-ApplicationContext-Bean-Util/</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
     
@@ -128,6 +128,13 @@
   </url>
   
   <url>
+    <loc>http://nopainanymore.me/SpringBoot-HandlerMethodArgumentResolver/</loc>
+    
+    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://nopainanymore.me/Building-Microservices-Microservices/</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
@@ -135,7 +142,7 @@
   </url>
   
   <url>
-    <loc>http://nopainanymore.me/CleanCode-Bloated/</loc>
+    <loc>http://nopainanymore.me/Building-Microservices-HowToModelServices/</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
     
@@ -143,13 +150,6 @@
   
   <url>
     <loc>http://nopainanymore.me/Building-Microservices-TheEvolutionaryArchitect/</loc>
-    
-    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://nopainanymore.me/Building-Microservices-HowToModelServices/</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
     
@@ -177,13 +177,6 @@
   </url>
   
   <url>
-    <loc>http://nopainanymore.me/SpringBoot-HandlerMethodArgumentResolver/</loc>
-    
-    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://nopainanymore.me/Java8-Stream-Introduction/</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
@@ -191,7 +184,21 @@
   </url>
   
   <url>
-    <loc>http://nopainanymore.me/tags/index.html</loc>
+    <loc>http://nopainanymore.me/archives/index.html</loc>
+    
+    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://nopainanymore.me/Recently-20190806/</loc>
+    
+    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://nopainanymore.me/CleanCode-Bloated/</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
     
@@ -213,13 +220,6 @@
   
   <url>
     <loc>http://nopainanymore.me/Recently-20190709/</loc>
-    
-    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://nopainanymore.me/Recently-20190806/</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
     
@@ -261,6 +261,13 @@
   </url>
   
   <url>
+    <loc>http://nopainanymore.me/Object-Oriented-Programming-Principles/</loc>
+    
+    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://nopainanymore.me/AbstractClassInterface-Understanding/</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
@@ -269,13 +276,6 @@
   
   <url>
     <loc>http://nopainanymore.me/DDD-Spring/</loc>
-    
-    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://nopainanymore.me/Object-Oriented-Programming-Principles/</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
     
@@ -296,7 +296,7 @@
   </url>
   
   <url>
-    <loc>http://nopainanymore.me/archives/index.html</loc>
+    <loc>http://nopainanymore.me/about/index.html</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
     
@@ -310,7 +310,7 @@
   </url>
   
   <url>
-    <loc>http://nopainanymore.me/about/index.html</loc>
+    <loc>http://nopainanymore.me/tags/index.html</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
     
