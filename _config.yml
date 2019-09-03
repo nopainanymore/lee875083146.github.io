@@ -92,9 +92,12 @@ baidusitemap:
 
 
 algolia:
-  applicationID: 'W8TS0H8GFA'
-  apiKey: '364d9cee251c8999b406cc3393f74a54'
+  applicationID: 'TBN51XHQ7I'
+  apiKey: 'ad36c28a1992fcfba299a447cf3558b9'
   indexName: 'hexo'
+  # applicationID: 'W8TS0H8GFA'
+  # apiKey: '364d9cee251c8999b406cc3393f74a54'
+  # indexName: 'hexo'
 
 sequence:
   webfont: 'https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.27/webfontloader.js'
