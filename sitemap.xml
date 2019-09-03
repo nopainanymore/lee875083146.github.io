@@ -79,7 +79,7 @@
   </url>
   
   <url>
-    <loc>http://nopainanymore.me/Markdown-Sequence/</loc>
+    <loc>http://nopainanymore.me/Cache-concept/</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
     
@@ -107,13 +107,6 @@
   </url>
   
   <url>
-    <loc>http://nopainanymore.me/SpringBoot-Mybatis/</loc>
-    
-    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://nopainanymore.me/DTO-Understanding/</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
@@ -121,7 +114,14 @@
   </url>
   
   <url>
-    <loc>http://nopainanymore.me/Building-Microservices-Microservices/</loc>
+    <loc>http://nopainanymore.me/SpringBoot-Mybatis/</loc>
+    
+    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://nopainanymore.me/Java8-Optional/</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
     
@@ -135,7 +135,7 @@
   </url>
   
   <url>
-    <loc>http://nopainanymore.me/Building-Microservices-TheEvolutionaryArchitect/</loc>
+    <loc>http://nopainanymore.me/Building-Microservices-Microservices/</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
     
@@ -149,7 +149,7 @@
   </url>
   
   <url>
-    <loc>http://nopainanymore.me/Java8-Optional/</loc>
+    <loc>http://nopainanymore.me/Building-Microservices-TheEvolutionaryArchitect/</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
     
@@ -177,13 +177,6 @@
   </url>
   
   <url>
-    <loc>http://nopainanymore.me/Cache-concept/</loc>
-    
-    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://nopainanymore.me/Java8-Stream-Introduction/</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
@@ -198,6 +191,13 @@
   </url>
   
   <url>
+    <loc>http://nopainanymore.me/Java-ClassLoader/</loc>
+    
+    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://nopainanymore.me/Markdown-Grammer/</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
@@ -205,7 +205,7 @@
   </url>
   
   <url>
-    <loc>http://nopainanymore.me/Java-ClassLoader/</loc>
+    <loc>http://nopainanymore.me/Markdown-Sequence/</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
     
@@ -240,14 +240,14 @@
   </url>
   
   <url>
-    <loc>http://nopainanymore.me/Java-IO-Stream/</loc>
+    <loc>http://nopainanymore.me/Java8-Stream-usage/</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://nopainanymore.me/Java8-Stream-usage/</loc>
+    <loc>http://nopainanymore.me/Java-IO-Stream/</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
     
@@ -303,14 +303,14 @@
   </url>
   
   <url>
-    <loc>http://nopainanymore.me/categories/index.html</loc>
+    <loc>http://nopainanymore.me/archives/index.html</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://nopainanymore.me/archives/index.html</loc>
+    <loc>http://nopainanymore.me/categories/index.html</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
     
