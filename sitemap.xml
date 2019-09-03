@@ -79,7 +79,7 @@
   </url>
   
   <url>
-    <loc>http://nopainanymore.me/Cache-concept/</loc>
+    <loc>http://nopainanymore.me/Markdown-Sequence/</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
     
@@ -100,14 +100,14 @@
   </url>
   
   <url>
-    <loc>http://nopainanymore.me/SpringBoot-Mybatis/</loc>
+    <loc>http://nopainanymore.me/SpringBoot-ApplicationContext-Bean-Util/</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://nopainanymore.me/SpringBoot-ApplicationContext-Bean-Util/</loc>
+    <loc>http://nopainanymore.me/SpringBoot-Mybatis/</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
     
@@ -122,13 +122,6 @@
   
   <url>
     <loc>http://nopainanymore.me/Hexo-Github-Domain/</loc>
-    
-    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://nopainanymore.me/Java8-Optional/</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
     
@@ -163,6 +156,13 @@
   </url>
   
   <url>
+    <loc>http://nopainanymore.me/Cache-concept/</loc>
+    
+    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://nopainanymore.me/IDEA-Settings/</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
@@ -171,6 +171,13 @@
   
   <url>
     <loc>http://nopainanymore.me/CleanCode-Bloated/</loc>
+    
+    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://nopainanymore.me/Java8-Optional/</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
     
@@ -198,21 +205,14 @@
   </url>
   
   <url>
-    <loc>http://nopainanymore.me/Markdown-Grammer/</loc>
-    
-    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://nopainanymore.me/Markdown-Sequence/</loc>
-    
-    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://nopainanymore.me/Recently-20190709/</loc>
+    
+    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://nopainanymore.me/Markdown-Grammer/</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
     
@@ -296,13 +296,6 @@
   </url>
   
   <url>
-    <loc>http://nopainanymore.me/about/index.html</loc>
-    
-    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://nopainanymore.me/archives/index.html</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
@@ -310,14 +303,21 @@
   </url>
   
   <url>
-    <loc>http://nopainanymore.me/learningPlan/index.html</loc>
+    <loc>http://nopainanymore.me/categories/index.html</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://nopainanymore.me/categories/index.html</loc>
+    <loc>http://nopainanymore.me/about/index.html</loc>
+    
+    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://nopainanymore.me/learningPlan/index.html</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
     
