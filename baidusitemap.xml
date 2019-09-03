@@ -46,13 +46,10 @@
     <loc>http://nopainanymore.me/SpringBoot-ApplicationContext-Bean-Util/</loc>
     <lastmod>2019-08-15</lastmod>
   </url>  <url>
-    <loc>http://nopainanymore.me/DTO-Understanding/</loc>
-    <lastmod>2019-08-15</lastmod>
-  </url>  <url>
     <loc>http://nopainanymore.me/SpringBoot-Mybatis/</loc>
     <lastmod>2019-08-15</lastmod>
   </url>  <url>
-    <loc>http://nopainanymore.me/Java8-Optional/</loc>
+    <loc>http://nopainanymore.me/DTO-Understanding/</loc>
     <lastmod>2019-08-15</lastmod>
   </url>  <url>
     <loc>http://nopainanymore.me/Hexo-Github-Domain/</loc>
@@ -61,10 +58,13 @@
     <loc>http://nopainanymore.me/Building-Microservices-Microservices/</loc>
     <lastmod>2019-08-15</lastmod>
   </url>  <url>
-    <loc>http://nopainanymore.me/Building-Microservices-HowToModelServices/</loc>
+    <loc>http://nopainanymore.me/Java8-Optional/</loc>
     <lastmod>2019-08-15</lastmod>
   </url>  <url>
     <loc>http://nopainanymore.me/Building-Microservices-TheEvolutionaryArchitect/</loc>
+    <lastmod>2019-08-15</lastmod>
+  </url>  <url>
+    <loc>http://nopainanymore.me/Building-Microservices-HowToModelServices/</loc>
     <lastmod>2019-08-15</lastmod>
   </url>  <url>
     <loc>http://nopainanymore.me/Catch-Exceprion-In-Lambda/</loc>
@@ -103,10 +103,10 @@
     <loc>http://nopainanymore.me/Thinking-about-OO-20190711/</loc>
     <lastmod>2019-08-15</lastmod>
   </url>  <url>
-    <loc>http://nopainanymore.me/Java8-Stream-usage/</loc>
+    <loc>http://nopainanymore.me/Java-IO-Stream/</loc>
     <lastmod>2019-08-15</lastmod>
   </url>  <url>
-    <loc>http://nopainanymore.me/Java-IO-Stream/</loc>
+    <loc>http://nopainanymore.me/Java8-Stream-usage/</loc>
     <lastmod>2019-08-15</lastmod>
   </url>  <url>
     <loc>http://nopainanymore.me/Spring-AOP/</loc>
