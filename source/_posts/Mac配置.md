@@ -86,6 +86,8 @@ $ brew install autojump
 
 原生支持导出PDF、HTML，结合[pandoc](https://github.com/jgm/pandoc)可以导出Word、Epub等格式。
 
+`Atom`是Github开发的文本编辑器，有丰富的插件，也挺不错，最近在适用。
+
 ## 视频播放器
 
 视频播放器使用的是`Movist Pro`。
