@@ -1,0 +1,152 @@
+<!DOCTYPE html><html lang="en"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="消息队列"><meta name="keywords" content="消息队列"><meta name="author" content="nopainanymore"><meta name="copyright" content="nopainanymore"><title>消息队列 | No Pain AnyMore</title><link rel="shortcut icon" href="https://nopainanymore.oss-cn-hangzhou.aliyuncs.com/favicon.jpg?x-oss-process=style/sw-white"><link rel="stylesheet" href="/css/index.css?version=1.6.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.6.1"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css?version=1.6.1"><link rel="dns-prefetch" href="https://cdn.staticfile.org"><link rel="dns-prefetch" href="https://cdn.bootcss.com"><link rel="dns-prefetch" href="https://creativecommons.org"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.1.1/dist/instantsearch.min.css"><script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.1.1/dist/instantsearch.min.js" defer></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css"><script src="https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js"></script><script src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script><link rel="dns-prefetch" href="https://hm.baidu.com"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?https://hm.baidu.com/hm.js?ca6ee8d386d608e489e2f483d8553676";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();</script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: {"appId":"TBN51XHQ7I","apiKey":"ad36c28a1992fcfba299a447cf3558b9","indexName":"hexo","hits":{"per_page":10},"languages":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}.","hits_stats":"${hits} results found in ${time} ms"}},
+  localSearch: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  }
+} </script></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#优缺点"><span class="toc-number">1.</span> <span class="toc-text"> 优缺点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#优点"><span class="toc-number">1.1.</span> <span class="toc-text"> 优点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#缺点"><span class="toc-number">1.2.</span> <span class="toc-text"> 缺点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四种消息队列的比较"><span class="toc-number">2.</span> <span class="toc-text"> 四种消息队列的比较</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何保证消息队列的高可用性"><span class="toc-number">3.</span> <span class="toc-text"> 如何保证消息队列的高可用性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#rabbitmq"><span class="toc-number">3.1.</span> <span class="toc-text"> RabbitMQ</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#普通集群模式"><span class="toc-number">3.1.1.</span> <span class="toc-text"> 普通集群模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#镜像集群模式"><span class="toc-number">3.1.2.</span> <span class="toc-text"> 镜像集群模式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#kafka"><span class="toc-number">3.2.</span> <span class="toc-text"> Kafka</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#消息重复消费问题"><span class="toc-number">4.</span> <span class="toc-text"> 消息重复消费问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#消息丢失问题"><span class="toc-number">5.</span> <span class="toc-text"> 消息丢失问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#rabbitmq-2"><span class="toc-number">5.1.</span> <span class="toc-text"> RabbitMQ</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#生产者写入问题"><span class="toc-number">5.1.1.</span> <span class="toc-text"> 生产者写入问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#消息未被消费mq挂掉"><span class="toc-number">5.1.2.</span> <span class="toc-text"> 消息未被消费，MQ挂掉</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#消费者未消费完消息消费者挂掉"><span class="toc-number">5.2.</span> <span class="toc-text"> 消费者未消费完消息，消费者挂掉</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#kafka-2"><span class="toc-number">5.3.</span> <span class="toc-text"> Kafka</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#消费者未消费完消息"><span class="toc-number">5.3.1.</span> <span class="toc-text"> 消费者未消费完消息</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#kafka自身"><span class="toc-number">5.3.2.</span> <span class="toc-text"> Kafka自身</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#保证消息队列按顺序获取队列中的数据"><span class="toc-number">6.</span> <span class="toc-text"> 保证消息队列按顺序获取队列中的数据</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#rabbitmq-3"><span class="toc-number">6.1.</span> <span class="toc-text"> RabbitMQ</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#kafka-3"><span class="toc-number">6.2.</span> <span class="toc-text"> Kafka</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料"><span class="toc-number">7.</span> <span class="toc-text"> 参考资料</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="http://ww1.sinaimg.cn/large/005yN1Nlgy1g0lee3rjxbj311s0scgpu.jpg"></div><div class="author-info__name text-center">nopainanymore</div><div class="author-info__description text-center"></div><div class="follow-button"><a href="https://github.com/Lee875083146">GitHub</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">Articles</span><span class="pull-right">46</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">Tags</span><span class="pull-right">57</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">Categories</span><span class="pull-right">54</span></a></div></div></div><div id="content-outer"><div class="plain" id="top-container"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">No Pain AnyMore</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> Search</span></a><a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a><a class="site-page" href="/learningPlan">LearningPlan</a><a class="site-page" href="/about">About</a></span></div></div><div class="layout" id="content-inner"><article id="post"><div class="plain" id="post-title">消息队列</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2019-09-15</time><span class="post-meta__separator">|</span><i class="fa fa-inbox" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/消息队列/"> 消息队列</a></div><div class="article-container" id="post-content"><p>消息队列知识点总结。</p>
+<a id="more"></a>
+<h2 id="优缺点"><a class="markdownIt-Anchor" href="#优缺点"></a> 优缺点</h2>
+<h3 id="优点"><a class="markdownIt-Anchor" href="#优点"></a> 优点</h3>
+<ul>
+<li>解耦</li>
+<li>异步</li>
+<li>削峰</li>
+</ul>
+<h3 id="缺点"><a class="markdownIt-Anchor" href="#缺点"></a> 缺点</h3>
+<ul>
+<li>系统可用性降低：当MQ出问题时，将会使系统产生问题</li>
+<li>系统复杂度变高：引入消息队列同时将会引入消息丢失、重复、消息顺序不一致等问题</li>
+<li>一致性问题：下游系统之间如果有协作的关系，可能会导致数据不一致</li>
+</ul>
+<h2 id="四种消息队列的比较"><a class="markdownIt-Anchor" href="#四种消息队列的比较"></a> 四种消息队列的比较</h2>
+<table>
+<thead>
+<tr>
+<th>比较</th>
+<th>ActiveMQ</th>
+<th>RabbitMQ</th>
+<th>RocketMQ</th>
+<th>Kafka</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>吞吐量</td>
+<td>万级</td>
+<td>万级</td>
+<td>十万级</td>
+<td>十万级</td>
+</tr>
+<tr>
+<td>特点</td>
+<td>成熟稳定但存在消息丢失的问题，社区不活跃</td>
+<td>ErLang开发性能好，延时比较低，改造难度大</td>
+<td>吞吐量高，阿里开发，topic可以达到几百几千级，使用分布式架构</td>
+<td>功能简单，吞吐量高，易扩展，适用于大数据的事实计算、日志采集等场景</td>
+</tr>
+</tbody>
+</table>
+<h2 id="如何保证消息队列的高可用性"><a class="markdownIt-Anchor" href="#如何保证消息队列的高可用性"></a> 如何保证消息队列的高可用性</h2>
+<h3 id="rabbitmq"><a class="markdownIt-Anchor" href="#rabbitmq"></a> RabbitMQ</h3>
+<p>RabbitMQ的部署方式一共有三种：单机模式、普通集群模式、镜像集群模式。</p>
+<h4 id="普通集群模式"><a class="markdownIt-Anchor" href="#普通集群模式"></a> 普通集群模式</h4>
+<p>在普通集群模式下，Queue的消息实体仅存在于其中一个节点，节点仅有相同的元数据（队列结构）。假设存在两个节点A、B，当消息进入A节点的Queue中后，consumer从B节点拉取时，RabbitMQ会临时在A、B间进行消息传输，把A中的消息实体取出并经过B发送给consumer。</p>
+<p>在这种模式下，RabbitMQ节点之前存在大量的数据传输，当其中一个节点挂掉后，节点的数据将无法被消费，没有可用性的保障。</p>
+<h4 id="镜像集群模式"><a class="markdownIt-Anchor" href="#镜像集群模式"></a> 镜像集群模式</h4>
+<p>在镜像集群模式下，消息实体会主动在镜像节点间同步，而不是在conumer拉取时才进行同步。不同节点间的数据完全一致，在producer写入时，消息实体将会在所有镜像节点同步。</p>
+<p>镜像集群模式虽然在一定程度上保证了HA，但是当数据量很大时，节点之间带宽将会被同步消耗，存在问题。</p>
+<h3 id="kafka"><a class="markdownIt-Anchor" href="#kafka"></a> Kafka</h3>
+<p>Kafka本身是分布式架构。</p>
+<ul>
+<li>Producer：生产者，消息的发送者。</li>
+<li>Broker：Kafka 集群由多个 Kafka 实例（server） 组成，每个实例构成一个 broker。</li>
+<li>Topic：每条发送到Kafka集群的消息都有其类别，这个类别称为Topic。</li>
+<li>Partition：Partition是物理上的概念，每个Topic包含一个或多个Partition。出于负载均衡的考虑，同一个Topic的Partitions分布在不同的broker。为了提高高可用性，Partitions可以由Kafka机制中的replicas来设置备份的数量。</li>
+<li>Consumer：消费者，从 Kafka 集群的 broker 中 pull 消息、消费消息</li>
+<li>Consumer group：high-level consumer API 中，每个 consumer 都属于一个 consumer-group，每条消息只能被 consumer-group 中的一个 Consumer 消费，但可以被多个 consumer-group 消费。</li>
+<li>replicas：partition 的副本，保障 partition 的高可用。</li>
+<li>leader：replicas 中的一个角色， producer 和 consumer 只跟 leader 交互；</li>
+<li>follower：replicas 中的一个角色，从 leader 中复制数据，作为副本，一旦 leader 挂掉，会从它的 followers 中选举出一个新的 leader 继续提供服务。</li>
+<li>controller：Kafka 集群中的其中一个服务器，用来进行 leader election 以及 各种 failover。</li>
+<li>ZooKeeper：Kafka 通过 ZooKeeper 来存储集群的 meta 信息等。</li>
+</ul>
+<h2 id="消息重复消费问题"><a class="markdownIt-Anchor" href="#消息重复消费问题"></a> 消息重复消费问题</h2>
+<ul>
+<li>通过数据库的主键作唯一性判断</li>
+<li>通过维持一个Redis set，插入数据前判断</li>
+</ul>
+<h2 id="消息丢失问题"><a class="markdownIt-Anchor" href="#消息丢失问题"></a> 消息丢失问题</h2>
+<h3 id="rabbitmq-2"><a class="markdownIt-Anchor" href="#rabbitmq-2"></a> RabbitMQ</h3>
+<p>消息丢失的三个场景：</p>
+<ul>
+<li>生产者写入RabbitMQ时，MQ自身存储出错。</li>
+<li>消息还未被消费，MQ自己挂了。</li>
+<li>消费者还没处理完消息，消费者挂了。</li>
+</ul>
+<h4 id="生产者写入问题"><a class="markdownIt-Anchor" href="#生产者写入问题"></a> 生产者写入问题</h4>
+<p>该问题有两种解决方式：通过AMQP事务机制实现、Confirm模式</p>
+<p>通过AMQP事务机制实现：<br>
+RabbitMQ中与事务机制有关的方法有三个：txSelect(), txCommit()以及txRollback(), txSelect用于将当前channel设置成transaction模式，txCommit用于提交事务，txRollback用于回滚事务，在通过txSelect开启事务之后，我们便可以发布消息给broker代理服务器了，如果txCommit提交成功了，则消息一定到达了broker了，如果在txCommit执行之前broker异常崩溃或者由于其他原因抛出异常，可以捕获异常通过txRollback回滚事务了。</p>
+<p>但AMQP是同步机制，会使吞吐量下降，影响MQ的性能。</p>
+<p>Confirm模式：<br>
+生产者将信道设置成confirm模式，一旦信道进入confirm模式，所有在该信道上面发布的消息都会被指派一个唯一的ID(从1开始)，一旦消息被投递到所有匹配的队列之后，broker就会发送一个确认给生产者（包含消息的唯一ID）,这就使得生产者知道消息已经正确到达目的队列了，如果消息和队列是可持久化的，那么确认消息会将消息写入磁盘之后发出，broker回传给生产者的确认消息中deliver-tag域包含了确认消息的序列号，此外broker也可以设置basic.ack的multiple域，表示到这个序列号之前的所有消息都已经得到了处理。</p>
+<p>confirm模式是异步的，一旦发布一条消息，生产者应用程序就可以在等信道返回确认的同时继续发送下一条消息，当消息最终得到确认之后，生产者应用便可以通过回调方法来处理该确认消息，如果RabbitMQ因为自身内部错误导致消息丢失，就会发送一条nack消息，生产者应用程序同样可以在回调方法中处理该nack消息。</p>
+<p>在channel 被设置成 confirm 模式之后，所有被 publish 的后续消息都将被 confirm（即 ack） 或者被nack一次。但是没有对消息被 confirm 的快慢做任何保证，并且同一条消息不会既被 confirm又被nack 。</p>
+<h4 id="消息未被消费mq挂掉"><a class="markdownIt-Anchor" href="#消息未被消费mq挂掉"></a> 消息未被消费，MQ挂掉</h4>
+<p>持久化到磁盘</p>
+<ul>
+<li>创建Queue时设置为持久化，保证RabbitMQ持久化queue元数据</li>
+<li>发送消息时将deliveryMode设置为2，开启消息的持久化</li>
+</ul>
+<p>设置了队列和消息的持久化之后，当broker服务重启的之后，消息依旧存在。单只设置队列持久化，重启之后消息会丢失；单只设置消息的持久化，重启之后队列消失，既而消息也丢失。单单设置消息持久化而不设置队列的持久化显得毫无意义。</p>
+<h3 id="消费者未消费完消息消费者挂掉"><a class="markdownIt-Anchor" href="#消费者未消费完消息消费者挂掉"></a> 消费者未消费完消息，消费者挂掉</h3>
+<p>关闭AutoACK机制，处理完数据后手动发送ACK。</p>
+<h3 id="kafka-2"><a class="markdownIt-Anchor" href="#kafka-2"></a> Kafka</h3>
+<h4 id="消费者未消费完消息"><a class="markdownIt-Anchor" href="#消费者未消费完消息"></a> 消费者未消费完消息</h4>
+<p>关闭自动提交offset，改为手动提交。</p>
+<h4 id="kafka自身"><a class="markdownIt-Anchor" href="#kafka自身"></a> Kafka自身</h4>
+<ol>
+<li>topic设置<code>replication.factor</code>参数，每个partition必须至少有两个replica</li>
+<li>Kafka服务器端设置<code>min.insync.replicas</code>大于1，即要求至少leader至少感知到有一个follower保持联系。</li>
+<li>producer端设置<code>ack=all</code>，即必须写入所有的replica之后认为写入成功。</li>
+<li>producer设置<code>retries=MAX</code>，即一旦写入失败，进行无限重试。</li>
+</ol>
+<p>第三点和第四点同时保证了生产者不会丢失消息。</p>
+<h2 id="保证消息队列按顺序获取队列中的数据"><a class="markdownIt-Anchor" href="#保证消息队列按顺序获取队列中的数据"></a> 保证消息队列按顺序获取队列中的数据</h2>
+<p>顺序错乱的两个场景：</p>
+<ol>
+<li>RabbitMQ，一个queue对应多个consumer</li>
+<li>Kafka消费者多线程消费</li>
+</ol>
+<h3 id="rabbitmq-3"><a class="markdownIt-Anchor" href="#rabbitmq-3"></a> RabbitMQ</h3>
+<p>对queue进行拆分，把需要保证顺序的数据写入到一个queue中。</p>
+<h3 id="kafka-3"><a class="markdownIt-Anchor" href="#kafka-3"></a> Kafka</h3>
+<p>写入到统一partition的顺序性由kafka自身保证，当消费者端起多个线程消费partition中的数据时，仍存在问题。</p>
+<p>在消费者端，可以根据数据顺序Hash到不同的内存队列中处理。每个内存队列对应一个线程处理数据。</p>
+<h2 id="参考资料"><a class="markdownIt-Anchor" href="#参考资料"></a> 参考资料</h2>
+<p>石杉的架构笔记<br>
+<a href="http://melanx.com/2019/01/07/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E7%90%86%E8%A7%A3-kafka-%E7%9A%84%E5%88%86%E5%B8%83%E5%BC%8F%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/" target="_blank" rel="noopener">深入浅出理解Kafka 分布式消息队列</a><br>
+<a href="https://blog.csdn.net/u013256816/article/details/55515234" target="_blank" rel="noopener">RabbitMQ之消息确认机制（事务+Confirm）</a></p>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">nopainanymore</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://nopainanymore.me/MQ/">http://nopainanymore.me/MQ/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/消息队列/">消息队列</a></div><div class="post-qr-code"><div class="post-qr-code-item"><img class="post-qr-code__img" src="https://nopainanymore.oss-cn-hangzhou.aliyuncs.com/wechat.jpg?x-oss-process=style/sw-white"><div class="post-qr-code__desc">wechat</div></div></div><div class="social-share" data-disabled="diandian,tencent,qzone,google"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><nav id="pagination"><div class="next-post pull-right"><a href="/DesignPattern-Adapter/"><span>设计模式——适配器模式</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="gitalk-container"></div><script>var gitalk = new Gitalk({
+  clientID: 'b5808ee24dc05257f520',
+  clientSecret: '4b96b67ee846f12c0c590dfd71312ba19edea774',
+  repo: 'lee875083146.github.io',
+  owner: 'Lee875083146',
+  admin: 'Lee875083146',
+  id: md5(decodeURI(location.pathname)),
+  language: 'en'
+})
+gitalk.render('gitalk-container')</script></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2019 By nopainanymore</div><div class="framework-info"><span>Driven - </span><a href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.6.1"></script><script src="/js/fancybox.js?version=1.6.1"></script><script src="/js/sidebar.js?version=1.6.1"></script><script src="/js/copy.js?version=1.6.1"></script><script src="/js/fireworks.js?version=1.6.1"></script><script src="/js/transition.js?version=1.6.1"></script><script src="/js/scroll.js?version=1.6.1"></script><script src="/js/head.js?version=1.6.1"></script><script src="/js/search/algolia.js"></script><script>if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+}</script><div class="search-dialog" id="algolia-search"><div class="search-dialog__title" id="algolia-search-title">Algolia</div><div id="algolia-input-panel"><div id="algolia-search-input"></div></div><hr><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-stats"></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>
