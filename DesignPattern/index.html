@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="设计模式大纲"><meta name="keywords" content="设计模式"><meta name="author" content="nopainanymore"><meta name="copyright" content="nopainanymore"><title>设计模式大纲 | No Pain AnyMore</title><link rel="shortcut icon" href="https://nopainanymore.oss-cn-hangzhou.aliyuncs.com/favicon.jpg?x-oss-process=style/sw-white"><link rel="stylesheet" href="/css/index.css?version=1.6.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.6.1"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css?version=1.6.1"><link rel="dns-prefetch" href="https://cdn.staticfile.org"><link rel="dns-prefetch" href="https://cdn.bootcss.com"><link rel="dns-prefetch" href="https://creativecommons.org"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.1.1/dist/instantsearch.min.css"><script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.1.1/dist/instantsearch.min.js" defer></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css"><script src="https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js"></script><script src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script><link rel="dns-prefetch" href="https://hm.baidu.com"><script>var _hmt = _hmt || [];
+<!DOCTYPE html><html lang="en"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="设计模式归档"><meta name="keywords" content="设计模式"><meta name="author" content="nopainanymore"><meta name="copyright" content="nopainanymore"><title>设计模式归档 | No Pain AnyMore</title><link rel="shortcut icon" href="https://nopainanymore.oss-cn-hangzhou.aliyuncs.com/favicon.jpg?x-oss-process=style/sw-white"><link rel="stylesheet" href="/css/index.css?version=1.6.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.6.1"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css?version=1.6.1"><link rel="dns-prefetch" href="https://cdn.staticfile.org"><link rel="dns-prefetch" href="https://cdn.bootcss.com"><link rel="dns-prefetch" href="https://creativecommons.org"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.1.1/dist/instantsearch.min.css"><script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.1.1/dist/instantsearch.min.js" defer></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css"><script src="https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js"></script><script src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script><link rel="dns-prefetch" href="https://hm.baidu.com"><script>var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
   hm.src = "https://hm.baidu.com/hm.js?https://hm.baidu.com/hm.js?ca6ee8d386d608e489e2f483d8553676";
@@ -13,48 +13,156 @@
     error: 'Copy error',
     noSupport: 'The browser does not support'
   }
-} </script></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#创建型"><span class="toc-number">1.</span> <span class="toc-text"> 创建型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#单例singleton"><span class="toc-number">1.1.</span> <span class="toc-text"> 单例(Singleton)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#简单工厂simple-factory"><span class="toc-number">1.2.</span> <span class="toc-text"> 简单工厂(Simple Factory)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#工厂方法factory-method"><span class="toc-number">1.3.</span> <span class="toc-text"> 工厂方法(Factory Method)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#抽象工厂abastract-factory"><span class="toc-number">1.4.</span> <span class="toc-text"> 抽象工厂(Abastract Factory)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#建造者builder"><span class="toc-number">1.5.</span> <span class="toc-text"> 建造者(Builder)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#原型prototype"><span class="toc-number">1.6.</span> <span class="toc-text"> 原型(Prototype)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#行为型"><span class="toc-number">2.</span> <span class="toc-text"> 行为型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#责任链chain-of-responsibility"><span class="toc-number">2.1.</span> <span class="toc-text"> 责任链(Chain of Responsibility)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命令command"><span class="toc-number">2.2.</span> <span class="toc-text"> 命令(Command)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解释器interpreter"><span class="toc-number">2.3.</span> <span class="toc-text"> 解释器(Interpreter)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#迭代器iterater"><span class="toc-number">2.4.</span> <span class="toc-text"> 迭代器(Iterater)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#中介者mediator"><span class="toc-number">2.5.</span> <span class="toc-text"> 中介者(Mediator)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#备忘录memento"><span class="toc-number">2.6.</span> <span class="toc-text"> 备忘录(Memento)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#观察者observer"><span class="toc-number">2.7.</span> <span class="toc-text"> 观察者(Observer)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#状态state"><span class="toc-number">2.8.</span> <span class="toc-text"> 状态(State)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#策略strategy"><span class="toc-number">2.9.</span> <span class="toc-text"> 策略(Strategy)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#模板方法template-method"><span class="toc-number">2.10.</span> <span class="toc-text"> 模板方法(Template Method)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#访问者vistor"><span class="toc-number">2.11.</span> <span class="toc-text"> 访问者(Vistor)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#空对象null"><span class="toc-number">2.12.</span> <span class="toc-text"> 空对象(Null)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结构型"><span class="toc-number">3.</span> <span class="toc-text"> 结构型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#适配器adapter"><span class="toc-number">3.1.</span> <span class="toc-text"> 适配器(Adapter)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#桥接bridge"><span class="toc-number">3.2.</span> <span class="toc-text"> 桥接(Bridge)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#组合composite"><span class="toc-number">3.3.</span> <span class="toc-text"> 组合(Composite)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#装饰decorator"><span class="toc-number">3.4.</span> <span class="toc-text"> 装饰(Decorator)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#外观facade"><span class="toc-number">3.5.</span> <span class="toc-text"> 外观(Facade)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#享元flyweight"><span class="toc-number">3.6.</span> <span class="toc-text"> 享元(Flyweight)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代理proxy"><span class="toc-number">3.7.</span> <span class="toc-text"> 代理(Proxy)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其他"><span class="toc-number">4.</span> <span class="toc-text"> 其他</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#委派模式delegate"><span class="toc-number">4.1.</span> <span class="toc-text"> 委派模式(Delegate)</span></a></li></ol></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="http://ww1.sinaimg.cn/large/005yN1Nlgy1g0lee3rjxbj311s0scgpu.jpg"></div><div class="author-info__name text-center">nopainanymore</div><div class="author-info__description text-center"></div><div class="follow-button"><a href="https://github.com/Lee875083146">GitHub</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">Articles</span><span class="pull-right">49</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">Tags</span><span class="pull-right">60</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">Categories</span><span class="pull-right">57</span></a></div></div></div><div id="content-outer"><div class="plain" id="top-container"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">No Pain AnyMore</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> Search</span></a><a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a><a class="site-page" href="/learningPlan">LearningPlan</a><a class="site-page" href="/about">About</a></span></div></div><div class="layout" id="content-inner"><article id="post"><div class="plain" id="post-title">设计模式大纲</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2019-05-18</time><span class="post-meta__separator">|</span><i class="fa fa-inbox" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/设计模式/"> 设计模式</a></div><div class="article-container" id="post-content"><p>设计模式大纲。</p>
+} </script></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#创建型"><span class="toc-number">1.</span> <span class="toc-text"> 创建型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#行为型"><span class="toc-number">2.</span> <span class="toc-text"> 行为型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结构型"><span class="toc-number">3.</span> <span class="toc-text"> 结构型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其他"><span class="toc-number">4.</span> <span class="toc-text"> 其他</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="http://ww1.sinaimg.cn/large/005yN1Nlgy1g0lee3rjxbj311s0scgpu.jpg"></div><div class="author-info__name text-center">nopainanymore</div><div class="author-info__description text-center"></div><div class="follow-button"><a href="https://github.com/Lee875083146">GitHub</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">Articles</span><span class="pull-right">49</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">Tags</span><span class="pull-right">60</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">Categories</span><span class="pull-right">57</span></a></div></div></div><div id="content-outer"><div class="plain" id="top-container"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">No Pain AnyMore</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> Search</span></a><a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a><a class="site-page" href="/learningPlan">LearningPlan</a><a class="site-page" href="/about">About</a></span></div></div><div class="layout" id="content-inner"><article id="post"><div class="plain" id="post-title">设计模式归档</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2019-05-18</time><span class="post-meta__separator">|</span><i class="fa fa-inbox" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/设计模式/"> 设计模式</a></div><div class="article-container" id="post-content"><p>设计模式大纲。</p>
 <a id="more"></a>
 <h2 id="创建型"><a class="markdownIt-Anchor" href="#创建型"></a> 创建型</h2>
-<h3 id="单例singleton"><a class="markdownIt-Anchor" href="#单例singleton"></a> 单例(Singleton)</h3>
-<a href="/DesignPattern-Singleton/" title="设计模式——单例模式">设计模式——单例模式</a>
-<h3 id="简单工厂simple-factory"><a class="markdownIt-Anchor" href="#简单工厂simple-factory"></a> 简单工厂(Simple Factory)</h3>
-<a href="/DesignPattern-Factory/" title="设计模式——工厂模式">设计模式——工厂模式</a>
-<h3 id="工厂方法factory-method"><a class="markdownIt-Anchor" href="#工厂方法factory-method"></a> 工厂方法(Factory Method)</h3>
-<a href="/DesignPattern-Factory/" title="设计模式——工厂模式">设计模式——工厂模式</a>
-<h3 id="抽象工厂abastract-factory"><a class="markdownIt-Anchor" href="#抽象工厂abastract-factory"></a> 抽象工厂(Abastract Factory)</h3>
-<a href="/DesignPattern-Factory/" title="设计模式——工厂模式">设计模式——工厂模式</a>
-<h3 id="建造者builder"><a class="markdownIt-Anchor" href="#建造者builder"></a> 建造者(Builder)</h3>
-<a href="/DesignPattern-Builder/" title="设计模式——建造者模式">设计模式——建造者模式</a>
-<h3 id="原型prototype"><a class="markdownIt-Anchor" href="#原型prototype"></a> 原型(Prototype)</h3>
-<a href="/DesignPattern-Prototype/" title="设计模式——原型模式">设计模式——原型模式</a>
+<table>
+<thead>
+<tr>
+<th>模式</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>单例(Singleton)</td>
+<td><a href="/DesignPattern-Singleton/" title="设计模式——单例模式">设计模式——单例模式</a></td>
+</tr>
+<tr>
+<td>简单工厂(Simple Factory)</td>
+<td><a href="/DesignPattern-Factory/" title="设计模式——工厂模式">设计模式——工厂模式</a></td>
+</tr>
+<tr>
+<td>工厂方法(Factory Method)</td>
+<td><a href="/DesignPattern-Factory/" title="设计模式——工厂模式">设计模式——工厂模式</a></td>
+</tr>
+<tr>
+<td>抽象工厂(Abastract Factory)</td>
+<td><a href="/DesignPattern-Factory/" title="设计模式——工厂模式">设计模式——工厂模式</a></td>
+</tr>
+<tr>
+<td>建造者(Builder)</td>
+<td><a href="/DesignPattern-Builder/" title="设计模式——建造者模式">设计模式——建造者模式</a></td>
+</tr>
+<tr>
+<td>原型(Prototype)</td>
+<td><a href="/DesignPattern-Prototype/" title="设计模式——原型模式">设计模式——原型模式</a></td>
+</tr>
+</tbody>
+</table>
 <h2 id="行为型"><a class="markdownIt-Anchor" href="#行为型"></a> 行为型</h2>
-<h3 id="责任链chain-of-responsibility"><a class="markdownIt-Anchor" href="#责任链chain-of-responsibility"></a> 责任链(Chain of Responsibility)</h3>
-<h3 id="命令command"><a class="markdownIt-Anchor" href="#命令command"></a> 命令(Command)</h3>
-<h3 id="解释器interpreter"><a class="markdownIt-Anchor" href="#解释器interpreter"></a> 解释器(Interpreter)</h3>
-<h3 id="迭代器iterater"><a class="markdownIt-Anchor" href="#迭代器iterater"></a> 迭代器(Iterater)</h3>
-<h3 id="中介者mediator"><a class="markdownIt-Anchor" href="#中介者mediator"></a> 中介者(Mediator)</h3>
-<h3 id="备忘录memento"><a class="markdownIt-Anchor" href="#备忘录memento"></a> 备忘录(Memento)</h3>
-<h3 id="观察者observer"><a class="markdownIt-Anchor" href="#观察者observer"></a> 观察者(Observer)</h3>
-<a href="/DesignPattern-Observer/" title="设计模式——观察者模式">设计模式——观察者模式</a>
-<h3 id="状态state"><a class="markdownIt-Anchor" href="#状态state"></a> 状态(State)</h3>
-<h3 id="策略strategy"><a class="markdownIt-Anchor" href="#策略strategy"></a> 策略(Strategy)</h3>
-<h3 id="模板方法template-method"><a class="markdownIt-Anchor" href="#模板方法template-method"></a> 模板方法(Template Method)</h3>
-<h3 id="访问者vistor"><a class="markdownIt-Anchor" href="#访问者vistor"></a> 访问者(Vistor)</h3>
-<h3 id="空对象null"><a class="markdownIt-Anchor" href="#空对象null"></a> 空对象(Null)</h3>
+<table>
+<thead>
+<tr>
+<th>模式</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>责任链(Chain of Responsibility)</td>
+<td></td>
+</tr>
+<tr>
+<td>命令(Command)</td>
+<td></td>
+</tr>
+<tr>
+<td>解释器(Interpreter)</td>
+<td></td>
+</tr>
+<tr>
+<td>迭代器(Iterater)</td>
+<td></td>
+</tr>
+<tr>
+<td>中介者(Mediator)</td>
+<td></td>
+</tr>
+<tr>
+<td>备忘录(Memento)</td>
+<td></td>
+</tr>
+<tr>
+<td>观察者(Observer)</td>
+<td><a href="/DesignPattern-Observer/" title="设计模式——观察者模式">设计模式——观察者模式</a></td>
+</tr>
+<tr>
+<td>状态(State)</td>
+<td></td>
+</tr>
+<tr>
+<td>策略(Strategy)</td>
+<td></td>
+</tr>
+<tr>
+<td>模板方法(Template Method)</td>
+<td></td>
+</tr>
+<tr>
+<td>访问者(Vistor)</td>
+<td></td>
+</tr>
+<tr>
+<td>空对象(Null)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h2 id="结构型"><a class="markdownIt-Anchor" href="#结构型"></a> 结构型</h2>
-<h3 id="适配器adapter"><a class="markdownIt-Anchor" href="#适配器adapter"></a> 适配器(Adapter)</h3>
-<a href="/DesignPattern-Adapter/" title="设计模式——适配器模式">设计模式——适配器模式</a>
-<h3 id="桥接bridge"><a class="markdownIt-Anchor" href="#桥接bridge"></a> 桥接(Bridge)</h3>
-<h3 id="组合composite"><a class="markdownIt-Anchor" href="#组合composite"></a> 组合(Composite)</h3>
-<h3 id="装饰decorator"><a class="markdownIt-Anchor" href="#装饰decorator"></a> 装饰(Decorator)</h3>
-<h3 id="外观facade"><a class="markdownIt-Anchor" href="#外观facade"></a> 外观(Facade)</h3>
-<h3 id="享元flyweight"><a class="markdownIt-Anchor" href="#享元flyweight"></a> 享元(Flyweight)</h3>
-<h3 id="代理proxy"><a class="markdownIt-Anchor" href="#代理proxy"></a> 代理(Proxy)</h3>
-<a href="/DesignPattern-Proxy/" title="设计模式——代理模式">设计模式——代理模式</a>
+<table>
+<thead>
+<tr>
+<th>模式</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>适配器(Adapter)</td>
+<td><a href="/DesignPattern-Adapter/" title="设计模式——适配器模式">设计模式——适配器模式</a></td>
+</tr>
+<tr>
+<td>桥接(Bridge)</td>
+<td></td>
+</tr>
+<tr>
+<td>组合(Composite)</td>
+<td></td>
+</tr>
+<tr>
+<td>装饰(Decorator)</td>
+<td></td>
+</tr>
+<tr>
+<td>外观(Facade)</td>
+<td></td>
+</tr>
+<tr>
+<td>享元(Flyweight)</td>
+<td></td>
+</tr>
+<tr>
+<td>代理(Proxy)</td>
+<td><a href="/DesignPattern-Proxy/" title="设计模式——代理模式">设计模式——代理模式</a></td>
+</tr>
+</tbody>
+</table>
 <h2 id="其他"><a class="markdownIt-Anchor" href="#其他"></a> 其他</h2>
-<h3 id="委派模式delegate"><a class="markdownIt-Anchor" href="#委派模式delegate"></a> 委派模式(Delegate)</h3>
-<a href="/DesignPattern-Delegate/" title="设计模式——委派模式">设计模式——委派模式</a>
+<table>
+<thead>
+<tr>
+<th>模式</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>委派模式(Delegate)</td>
+<td><a href="/DesignPattern-Delegate/" title="设计模式——委派模式">设计模式——委派模式</a></td>
+</tr>
+</tbody>
+</table>
 </div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">nopainanymore</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://nopainanymore.me/DesignPattern/">http://nopainanymore.me/DesignPattern/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/设计模式/">设计模式</a></div><div class="post-qr-code"><div class="post-qr-code-item"><img class="post-qr-code__img" src="https://nopainanymore.oss-cn-hangzhou.aliyuncs.com/wechat.jpg?x-oss-process=style/sw-white"><div class="post-qr-code__desc">wechat</div></div></div><div class="social-share" data-disabled="diandian,tencent,qzone,google"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><nav id="pagination"><div class="prev-post pull-left"><a href="/DesignPattern-Delegate/"><i class="fa fa-chevron-left">  </i><span>设计模式——委派模式</span></a></div><div class="next-post pull-right"><a href="/SpringBoot-HandlerMethodArgumentResolver/"><span>HandlerMethodArgumentResolver</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="gitalk-container"></div><script>var gitalk = new Gitalk({
   clientID: 'b5808ee24dc05257f520',
   clientSecret: '4b96b67ee846f12c0c590dfd71312ba19edea774',
