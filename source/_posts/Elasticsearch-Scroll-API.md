@@ -48,4 +48,4 @@ Elasticsearch SearchScroll 可以用在查询数据量较大的情况。
 
 ## Clear the scroll context
 
-最后ScrollId可以通过 ClearScrollAPI进行删除，以释放查询的上下文。当Scroll超时时ScrollId可以自动清除，但是最佳实践是当srcoll session完成时尽快清除。
+最后ScrollId可以通过ClearScrollAPI进行删除，以释放查询的上下文。当Scroll超时时ScrollId可以自动清除，但是最佳实践是当srcoll session完成时尽快清除。
