@@ -1,5 +1,5 @@
 ---
-title: CompletableFuture
+title: Java Callable Future CompletableFuture
 tags: []
 categories:
   - null
@@ -8,4 +8,3 @@ entitle:
 ---
 
 <!--more-->
-
