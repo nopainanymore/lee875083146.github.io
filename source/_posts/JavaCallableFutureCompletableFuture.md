@@ -1,10 +1,11 @@
 ---
 title: Java Callable Future CompletableFuture
-tags: []
+tags: [Java,Future,CompletableFuture]
 categories:
-  - null
+- Java
+- Future
 date: 2019-11-01 16:37:28
-entitle:
+entitle: Java-Future-CompletableFuture
 ---
 
 <!--more-->
