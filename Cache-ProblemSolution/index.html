@@ -13,34 +13,36 @@
     error: 'Copy error',
     noSupport: 'The browser does not support'
   }
-} </script></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#缓存穿透"><span class="toc-number">1.</span> <span class="toc-text"> 缓存穿透</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#缓存并发"><span class="toc-number">2.</span> <span class="toc-text"> 缓存并发</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#缓存失效"><span class="toc-number">3.</span> <span class="toc-text"> 缓存失效</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#缓存雪崩"><span class="toc-number">4.</span> <span class="toc-text"> 缓存雪崩</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#缓存预热"><span class="toc-number">5.</span> <span class="toc-text"> 缓存预热</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#缓存算法"><span class="toc-number">6.</span> <span class="toc-text"> 缓存算法</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="http://ww1.sinaimg.cn/large/005yN1Nlgy1g0lee3rjxbj311s0scgpu.jpg"></div><div class="author-info__name text-center">nopainanymore</div><div class="author-info__description text-center"></div><div class="follow-button"><a href="https://github.com/Lee875083146">GitHub</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">Articles</span><span class="pull-right">59</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">Tags</span><span class="pull-right">69</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">Categories</span><span class="pull-right">68</span></a></div></div></div><div id="content-outer"><div class="plain" id="top-container"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">No Pain AnyMore</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> Search</span></a><a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a><a class="site-page" href="/learningPlan">LearningPlan</a><a class="site-page" href="/about">About</a></span></div></div><div class="layout" id="content-inner"><article id="post"><div class="plain" id="post-title">缓存相关的问题和解决方案</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2019-06-08</time><span class="post-meta__separator">|</span><i class="fa fa-inbox" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/缓存/"> 缓存</a></div><div class="article-container" id="post-content"><p>本文转载至<a href="https://my.oschina.net/huangcongmin12/blog/692783" target="_blank" rel="noopener">https://my.oschina.net/huangcongmin12/blog/692783</a>，介绍缓存相关的概念——缓存穿透、缓存并发、缓存失效、缓存预热、缓存雪崩、缓存算法。</p>
+} </script></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#缓存穿透"><span class="toc-number">1.</span> <span class="toc-text"> 缓存穿透</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#缓存并发"><span class="toc-number">2.</span> <span class="toc-text"> 缓存并发</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#缓存失效"><span class="toc-number">3.</span> <span class="toc-text"> 缓存失效</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#缓存雪崩"><span class="toc-number">4.</span> <span class="toc-text"> 缓存雪崩</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#缓存预热"><span class="toc-number">5.</span> <span class="toc-text"> 缓存预热</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#缓存算法"><span class="toc-number">6.</span> <span class="toc-text"> 缓存算法</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="http://ww1.sinaimg.cn/large/005yN1Nlgy1g0lee3rjxbj311s0scgpu.jpg"></div><div class="author-info__name text-center">nopainanymore</div><div class="author-info__description text-center"></div><div class="follow-button"><a href="https://github.com/Lee875083146">GitHub</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">Articles</span><span class="pull-right">63</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">Tags</span><span class="pull-right">77</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">Categories</span><span class="pull-right">73</span></a></div></div></div><div id="content-outer"><div class="plain" id="top-container"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">No Pain AnyMore</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> Search</span></a><a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a><a class="site-page" href="/learningPlan">LearningPlan</a><a class="site-page" href="/about">About</a></span></div></div><div class="layout" id="content-inner"><article id="post"><div class="plain" id="post-title">缓存相关的问题和解决方案</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2019-06-08</time><span class="post-meta__separator">|</span><i class="fa fa-inbox" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/缓存/"> 缓存</a></div><div class="article-container" id="post-content"><p>本文转载至<a href="https://my.oschina.net/huangcongmin12/blog/692783" target="_blank" rel="noopener">https://my.oschina.net/huangcongmin12/blog/692783</a>，介绍缓存相关的概念——缓存穿透、缓存并发、缓存失效、缓存预热、缓存雪崩、缓存算法。</p>
 <a id="more"></a>
 <h2 id="缓存穿透"><a class="markdownIt-Anchor" href="#缓存穿透"></a> 缓存穿透</h2>
 <p>我们在项目中使用缓存通常都是先检查缓存中是否存在，如果存在直接返回缓存内容，如果不存在就直接查询数据库然后再缓存查询结果返回。这个时候如果我们查询的某一个数据在缓存中一直不存在，就会造成每一次请求都查询DB，这样缓存就失去了意义，在流量大时，可能DB就挂掉了。</p>
 <p>那这种问题有什么好办法解决呢？<br>
-要是有人利用不存在的key频繁攻击我们的应用，这就是漏洞。<br>
-有一个比较巧妙的作法是，可以将这个不存在的key预先设定一个值。<br>
-比如，”key” , “&amp;&amp;”。<br>
-在返回这个&amp;&amp;值的时候，我们的应用就可以认为这是不存在的key，那我们的应用就可以决定是否继续等待继续访问，还是放弃掉这次操作。如果继续等待访问，过一个时间轮询点后，再次请求这个key，如果取到的值不再是&amp;&amp;，则可以认为这时候key有值了，从而避免了透传到数据库，从而把大量的类似请求挡在了缓存之中。</p>
+要是有人利用不存在的key频繁攻击我们的应用，这就是漏洞。</p>
+<p>应对缓存穿透一般有两种处理方式：</p>
+<ul>
+<li>将不存在的key预先设定一个值，在返回这个值的时候，我们的应用就可以认为这是不存在的key，那我们的应用就可以决定是否继续等待继续访问，还是放弃掉这次操作。如果继续等待访问，过一个时间轮询点后，再次请求这个key，如果取到的值不再是设定值，则可以认为这时候key有值了，从而避免了透传到数据库，从而把大量的类似请求挡在了缓存之中。</li>
+<li>BloomFilter——布隆过滤器</li>
+</ul>
 <h2 id="缓存并发"><a class="markdownIt-Anchor" href="#缓存并发"></a> 缓存并发</h2>
-<p>有时候如果网站并发访问高，一个缓存如果失效，可能出现多个进程同时查询DB，同时设置缓存的情况，如果并发确实很大，这也可能造成DB压力过大，还有缓存频繁更新的问题。<br>
-我现在的想法是对缓存查询加锁，如果KEY不存在，就加锁，然后查DB入缓存，然后解锁；其他进程如果发现有锁就等待，然后等解锁后返回数据或者进入DB查询。<br>
-这种情况和刚才说的预先设定值问题有些类似，只不过利用锁的方式，会造成部分请求等待。</p>
+<p>有时候如果网站并发访问高，一个缓存如果失效，可能出现多个进程同时查询DB，同时设置缓存的情况，如果并发确实很大，这也可能造成DB压力过大，还有缓存频繁更新的问题。</p>
+<p>我现在的想法是对缓存查询加锁，如果KEY不存在，就加锁，然后查DB入缓存，然后解锁；其他进程如果发现有锁就等待，然后等解锁后返回数据或者进入DB查询。</p>
+<p>这种情况和刚才说的预先设定值问题有些类似，只不过利用锁的方式，会造成部分请求等待。</p>
 <h2 id="缓存失效"><a class="markdownIt-Anchor" href="#缓存失效"></a> 缓存失效</h2>
-<p>引起这个问题的主要原因还是高并发的时候，平时我们设定一个缓存的过期时间时，可能有一些会设置1分钟啊，5分钟这些，并发很高时可能会出在某一个时间同时生成了很多的缓存，并且过期时间都一样，这个时候就可能引发一当过期时间到后，这些缓存同时失效，请求全部转发到DB，DB可能会压力过重。<br>
-那如何解决这些问题呢？<br>
+<p>引起这个问题的主要原因还是高并发的时候，平时我们设定一个缓存的过期时间时，可能有一些会设置1分钟啊，5分钟这些，并发很高时可能会出在某一个时间同时生成了很多的缓存，并且过期时间都一样，这个时候就可能引发一当过期时间到后，这些缓存同时失效，请求全部转发到DB，DB可能会压力过重。</p>
+<p>那如何解决这些问题呢？<br>
 其中的一个简单方案就时讲缓存失效时间分散开，比如我们可以在原有的失效时间基础上增加一个随机值，比如1-5分钟随机，这样每一个缓存的过期时间的重复率就会降低，就很难引发集体失效的事件。</p>
 <h2 id="缓存雪崩"><a class="markdownIt-Anchor" href="#缓存雪崩"></a> 缓存雪崩</h2>
-<p>缓存雪崩可能是因为数据未加载到缓存中，或者缓存同一时间大面积的失效，从而导致所有请求都去查数据库，导致数据库CPU和内存负载过高，甚至宕机。<br>
-解决思路：</p>
+<p>缓存雪崩可能是因为数据未加载到缓存中，或者缓存同一时间大面积的失效，从而导致所有请求都去查数据库，导致数据库CPU和内存负载过高，甚至宕机。</p>
+<p>解决思路：</p>
 <ol>
 <li>采用加锁计数，或者使用合理的队列数量来避免缓存失效时对数据库造成太大的压力。这种办法虽然能缓解数据库的压力，但是同时又降低了系统的吞吐量。</li>
 <li>分析用户行为，尽量让失效时间点均匀分布。避免缓存雪崩的出现。</li>
 <li>如果是因为某台缓存服务器宕机，可以考虑做主备，比如：redis主备，但是双缓存涉及到更新事务的问题，update可能读到脏数据，需要好好解决。</li>
 </ol>
 <h2 id="缓存预热"><a class="markdownIt-Anchor" href="#缓存预热"></a> 缓存预热</h2>
-<p>单机web系统情况下比较简单。<br>
-解决思路：</p>
+<p>单机web系统情况下比较简单。</p>
+<p>解决思路：</p>
 <ol>
 <li>直接写个缓存刷新页面，上线时手工操作下。</li>
 <li>数据量不大，可以在WEB系统启动的时候加载。</li>
