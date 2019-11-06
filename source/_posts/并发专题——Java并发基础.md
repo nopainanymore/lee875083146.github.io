@@ -54,7 +54,7 @@ ExecutorService可以通过以下两个方法关闭：
 
 ## Future
 
-我们可以提交`Callable`的任务给`ExecutorService`，但我们如何获取其执行的结果呢？
+我们可以提交`Callable`的任务给`ExecutorService`，但我们如何获取其执行的结果呢？`Future`对这种异步计算的情况进行了建模。
 
 `subimit`方法提交的任务将会交给某个线程去执行，然而它不知道这个任务何时执行结束，返回值可用，因此它返回了一种特殊的类型——`Future`，该类型可以在结果可用时使用`future.get()`获取它，同时提供了`isDone()`方法来检测是否执行完成。
 
@@ -73,8 +73,17 @@ ExecutorService可以通过以下两个方法关闭：
 
 ## CompletableFuture
 
+`CompletableFuture`是`Future`的扩展，用来实现并发，充分利用CPU，避免因为等待远程服务返回而阻塞线程的执行。
 
-
+`CompletableFuture`提供了比`Future`更多更方便的特性：
+* 异常管理机制
+* 使用`thenCompose`可以将两个异步计算合成为一个，这两个异步计算之间相互独立，同时第二个依赖第一个的结果
+* 使用`thenCombine`可以将两个异步计算进行合并，两个异步计算之间相互独立且无依赖
+* 等待`Future`中的所以任务都完成
+* 仅等待`Future`执行最快的任务完成，并返回结果
+* 通过编程的方式完成一个`Future`任务的执行
+* 应对Future的完成事件，能够使用`Future`计算的结果进行下一步操作
+* 可以使用定制的执行器，调整线程数量使之符合场景
 
 
 ## 参考资料
