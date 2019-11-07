@@ -20,18 +20,18 @@ Eric Evans的《领域驱动设计》无疑是软件设计领域最重要的几�
 
 ### 基础构件
 构件是DDD中的一些专有名词，让我们看一下图
-![DDD的专有名词](https://ws1.sinaimg.cn/large/0078YTE8gy1g2782r4t8jj31kw154q9b.jpg)
+![DDD的专有名词](https://nopainanymore.oss-cn-hangzhou.aliyuncs.com/DDD/DDD%E7%9A%84%E4%B8%93%E6%9C%89%E5%90%8D%E8%AF%8D.jpg?x-oss-process=style/sw-white)
 
 #### 限界上下文（Bounded Context)
 当进行领域建模的时候，任何将其作为一个整体进行建模的尝试注定会失败。因为各类利益相关者和他们对领域的看法可能完全不同，试图建立一个单一的、独特的模型来满足所有需求是完全不可能的，会把系统搞得极为复杂。
 让我们看一个示例图，这个图描述了销售领域已经识别出的模型
-![销售领域](https://ws1.sinaimg.cn/large/0078YTE8gy1g2xqfc5cwoj31jn105tff.jpg)
+![销售领域](https://nopainanymore.oss-cn-hangzhou.aliyuncs.com/DDD/DDD%E9%94%80%E5%94%AE%E9%A2%86%E5%9F%9F.jpg?x-oss-process=style/sw-white)
 
 我们把模型元素稍加区分，成为分离的模型，就可以看出客户和订单的，他们是不同上下文的核心的概念。
-![区分](https://ws1.sinaimg.cn/large/0078YTE8gy1g278398kp7j31kw0yjjwd.jpg)
+![区分](https://nopainanymore.oss-cn-hangzhou.aliyuncs.com/DDD/DDD%E5%8C%BA%E5%88%86.jpg?x-oss-process=style/sw-white)
 
 在这里，我们确定了系统战略层面的核心部分，这些部分可能都涉及客户或订单的概念，但通常不同限界上下文对它们的属性感兴趣的部分并不相同。比如 Accounting上下文通常对客户的计费信息和不同的支付选项感兴趣，而Shipping上下文的对客户的唯一目标是运送地址，然后跟踪订单。 Order上下文可能通过客户的订单项了解商品信息，但实际上只涉及商品类目基本的内容（译者注：商品规格、商品详情这些信息Order上下文并不关注）。
-![概念在不同的上下文中](https://ws1.sinaimg.cn/large/0078YTE8gy1g27831iv0uj31kw0yctfq.jpg)
+![概念在不同的上下文中](https://nopainanymore.oss-cn-hangzhou.aliyuncs.com/DDD/DDD%E6%A6%82%E5%BF%B5%E5%9C%A8%E4%B8%8D%E5%90%8C%E7%9A%84%E4%B8%8A%E4%B8%8B%E6%96%87%E4%B8%AD.jpg?x-oss-process=style/sw-white)
 
 这里的模型元素可能看起来会以不同的方式反映在系统的不同层面中（译者：指的是Product和Customer对象会存在多个领域中，但是不同的概念）。现代的软件架构甚至更进一步，积极的通过冗余和最终一致性降低单个系统的复杂度，提升系统弹性，并提高整体的开发生产力（译者：CQRS和事件驱动架构）
 
@@ -67,7 +67,7 @@ Eric Evans的《领域驱动设计》无疑是软件设计领域最重要的几�
 * 实体类Entity - JPA @entity 注解 +对应的equals(…)和 hashCode()方法
 * 仓储Repository - Spring的组件，通常用Spring的Repository的接口。
 * 领域服务Domain Service - 通常是Spring的组件，使用@component注解。如果这个服务不需要事务或者安全的支撑，也可以直接new。
-* 
+*
 不是Spring中所有的对象都可以映射到DDD的分类中。剩下的一般分为两组：
 
 **应用配置Application configuration** - 对象或者配置模块
@@ -83,4 +83,3 @@ Appendix A: Bibliography
 * [ddd] - Eric Evans — Domain-Driven Design: Tackling Complexity in the Heart of Software- Addison Wesley. 2003.
 * [ddd-quickly] - Abel Avram, Floyd Marinescu — Domain-Driven Design Quickly. InfoQ. 2006.
 * [power-of-value-objects] - Dan Bergh Johnsson — Power Use of Value Objects in DDD. InfoQ. 2009.
-
