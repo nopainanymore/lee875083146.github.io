@@ -40,4 +40,3 @@ Hexo部署到GitPage后绑定博客到自有域名。
 
 ![GodaddyDNSManagement](https://nopainanymore.oss-cn-hangzhou.aliyuncs.com/GitPages/GodaddyDNSManagement.PNG?x-oss-process=style/sw-white " GodaddyDNSManagement")
 
-
