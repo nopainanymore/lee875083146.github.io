@@ -39,4 +39,3 @@ Hexo部署到GitPage后绑定博客到自有域名。
 修改Godaddy默认域名DNS解析，将其修改为DNSPod中NS记录对应的记录值，注意去掉最后的.符号。
 
 ![GodaddyDNSManagement](https://nopainanymore.oss-cn-hangzhou.aliyuncs.com/GitPages/GodaddyDNSManagement.PNG?x-oss-process=style/sw-white " GodaddyDNSManagement")
-
