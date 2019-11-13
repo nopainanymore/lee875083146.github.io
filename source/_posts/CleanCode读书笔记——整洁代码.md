@@ -8,4 +8,6 @@ date: 2019-11-13 10:06:32
 entitle: CleanCode——CleanCode
 ---
 
+CleanCode读书笔记第一章整洁代码。
+
 <!--more-->
