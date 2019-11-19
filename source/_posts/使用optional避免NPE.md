@@ -12,16 +12,18 @@ categories:
 在Java开发过程中，null引发的NullPointException是最常见的问题，本文介绍了Java中的null及如何使用optional正确处理null，避免NPE。
 <!--more-->
 
-
 ## Java中的null
+
 对于Java程序员来说，NullPointException(NPE)是最常出现的异常，null设计的初衷是对“不存在的值”进行建模。
 
 ### null的一些特点
+
 1. null是Java中的关键字。
 2. null是所有引用类型的默认值。
 3. 含有null值的包装类在Java拆箱生成基本数据时都会产生**NPE**。
 
 ### null带来的问题
+
 1. 如果处理不正确将引起NPE，Java程序开发中最典型的异常。
 2. 多层null检查，使代码膨胀，降低代码的可读性。
 3. null本身没有任何语义，它代表的是在静态类型语言中以一种错误的方式对缺失变量的建模。
@@ -30,9 +32,11 @@ categories:
 
 
 ## Optional类
+
 Java8中引入了`java.util.Optional`类处理null，Optional类是一个容器对象，包含了一个可能为null也可能不为null的对象。
 
 ### 介绍
+
 ![Optional Diagrams](https://nopainanymore.oss-cn-hangzhou.aliyuncs.com/java8/JavaOptinal.jpg?x-oss-process=style/sw-white "Optional Diagrams")
 
 方法|描述|作用
@@ -52,6 +56,7 @@ Java8中引入了`java.util.Optional`类处理null，Optional类是一个容器�
 
 
 ## 使用Optional优雅地处理null
+
 例子中用到的类：
 ```java
 @Data
@@ -92,11 +97,10 @@ public class Student {
 public class Pet {
 
     private String name;
-
-
 }
 ```
 ### 错误使用方式
+
 很多人在使用Optional时，先使用`isPresent()`判断Optional中是否为null，然后调用`get()`方法获取，但这样和原先`== null`没有任何区别，并不是Java8中Optional的正确使用姿势。
 错误使用方式：
 ```java
@@ -108,7 +112,9 @@ Optional<Student> studentOpt = Optional.ofNullable(student);
         }
 ```
 ### 正确使用姿势
+
 #### orElse、orElseGet、orElseThrow
+
 使用这三个方法去获取Optional中的值。
 
 ```java
@@ -123,6 +129,7 @@ Optional<Student> studentOpt = Optional.ofNullable(student);
       Student student = studentOpt.orElseThrow(() -> new RuntimeException("student is not found"));
 ```
 #### map
+
 `map()`用来获取或者转换对象中的属性。
 
 ```java
@@ -132,8 +139,10 @@ Optional<Student> studentOpt = Optional.ofNullable(student);
                 .orElse("no name");
 ```
 #### flatmap
+
 和`map`类似但用来处理获取的值是一个Optional的情况。
 例子中使用`Optional.ofNullable(s.getPet())`来构造这种场景。
+
 ```java
         String petName = studentOpt
                 .flatMap(s -> Optional.ofNullable(s.getPet()))
@@ -142,6 +151,7 @@ Optional<Student> studentOpt = Optional.ofNullable(student);
 ```
 
 #### filter
+
 filter可以对Optional中对象增加条件判断，进一步简化if代码。
 
 ```java
@@ -151,10 +161,6 @@ filter可以对Optional中对象增加条件判断，进一步简化if代码。
 ```
 
 #### 使用Optional的注意点
+
 * Optional不应该是实体类的属性，Optional没有实现 `Serializable` 接口，不能被序列化
 * 不要用Optional封装`List`，例如在查询对象列表时，当没有任何一个对象时返回`new ArrayList()`
-
-
-
-
-
