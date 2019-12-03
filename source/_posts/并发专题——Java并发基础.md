@@ -3,7 +3,7 @@ title: 并发专题——Java并发基础
 tags: [并发,Java,Runnable,Thread,Future,CompletableFuture]
 categories:
 - Java
-- Future
+- 并发
 date: 2019-11-01 16:37:28
 entitle: Concurrency-Java-Basics
 ---
