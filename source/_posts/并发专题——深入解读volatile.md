@@ -14,3 +14,16 @@ Unfinished
 <!--more-->
 
 ## 初识volatile
+
+## volatile与JMM Java内存模型
+
+
+## 重排序
+
+## 可见性
+
+
+## 有序性
+
+
+## 总结
