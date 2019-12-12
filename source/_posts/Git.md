@@ -76,7 +76,7 @@ Git的分支也很轻量，它们只是简单地指向某个提交记录，Git�
 
 ## cherry-pick
 
-`cherry-pick`将一些提交复制到当前所在的位置`（HEAD）`下面
+`cherry-pick`将一些提交复制到当前所在的位置`（HEAD）`下面。
 
 `git cherry-pick <提交号>...`
 
