@@ -109,7 +109,7 @@ public static void main(String[] args) {
 
 结合一张图来看上述的操作。
 
-[!PassByValue](https://nopainanymore.oss-cn-hangzhou.aliyuncs.com/java/PassByValue.png?x-oss-process=style/sw-white)
+![PassByValue](https://nopainanymore.oss-cn-hangzhou.aliyuncs.com/java/PassByValue.png?x-oss-process=style/sw-white)
 
 `origin`与`value`都为对象在堆的内存地址，即都指向了同一个对象。
 
