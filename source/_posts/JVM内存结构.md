@@ -11,3 +11,7 @@ entitle: Java-JVM-MemoryStructure
 本文介绍JVM的内存模型。
 
 <!--more-->
+
+Java虚拟机的内存结构一直是面试中的常客。
+
+简单总结下JVM的
