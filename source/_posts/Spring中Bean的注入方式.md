@@ -190,6 +190,10 @@ class MyComponent {
 
 ## 总结
 
+> The Spring team generally advocates constructor injection, as it lets you implement application components as immutable objects and ensures that required dependencies are not null. Furthemore, constructor-injected components are always returned to the client(calling) code in a fully initialized state. As a side note, a large number of constructor arguments is a bad code semll, implying that the class likely has too many responsibilities and should be refactored to better address proper separation of concerns.
+
+> Setter injection should primarily only be used for optional dependencies that can be assigned resonable default values within the class. Otherwise, non-null checks must be performed everywhere the code uses the dependency. One bennefit of setter injection is that setter methods make objects of that class amenable to reconfiguration or re-injection later. Management through JMX MBeans is therefore a compelling use case for setter injection.
+
 Spring团队之所以推荐使用构造方法注入主要是以下几点原因：
 * 通过构造方法，声明依赖，避免了在测试或者其他环境下依赖的缺失
 * 避免了因依赖确实而导致的NPE
