@@ -3,8 +3,8 @@ title: SpringBoot集成MyBatis
 entitle: SpringBoot-Mybatis
 tags: [SpringBoot,MyBatis]
 categories:
-  - SpringBoot
-  - MyBatis
+- Spring
+- MyBatis
 date: 2019-03-29 17:04:49
 ---
 

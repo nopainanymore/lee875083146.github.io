@@ -3,7 +3,7 @@ title: SpringBoot获取ApplicationContext中Bean的工具类
 entitle: SpringBoot-ApplicationContext-Bean-Util
 tags: [SpringBoot,Bean,工具类]
 categories:
-- SpringBoot
+- Spring
 date: 2019-05-13 21:34:11
 ---
 
@@ -45,7 +45,7 @@ public class ApplicationUtil implements ApplicationContextAware {
     public static ApplicationContext getApplicationContext() {
         return applicationContext;
     }
-    
+
     @SuppressWarnings("unchecked")
     public static <T> T getBeanByClass(Class<T> clazz) throws BeansException {
         try {
@@ -122,5 +122,3 @@ public class AppConController {
 
 ```
 日志结果：` AppConController- getService:com.nopainanymore.deepinspring.application.AppConService@603214d9`
-
-

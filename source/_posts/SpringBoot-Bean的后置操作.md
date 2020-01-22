@@ -1,8 +1,8 @@
 ---
 title: SpringBoot Bean的后置操作
-tags: [SpringBoot,Bean]
+tags: [Spring,SpringBoot,Bean]
 categories:
-- SpringBoot
+- Spring
 - Bean
 date: 2019-10-21 16:39:51
 entitle: SpringBoot-Bean-PostOperation

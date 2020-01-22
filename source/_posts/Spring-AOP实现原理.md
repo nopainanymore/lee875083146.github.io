@@ -1,10 +1,10 @@
 ---
-title: SpringAOP实现原理
+title: Spring-AOP实现原理
 entitle: Spring-AOP
-tags: [SpringBoot,AOP]
+tags: [Spring,SpringBoot,AOP]
 categories:
-- SpringBoot
-- AOP 
+- Spring
+- AOP
 date: 2019-05-04 14:26:30
 ---
 Spring AOP实现原理学习及如何在SpringBoot中使用。
@@ -203,7 +203,7 @@ public class Aspect {
 }
 
 ```
-### 切面作用目标 
+### 切面作用目标
 ```java
 @RestController
 @RequestMapping("/aop")
@@ -255,4 +255,3 @@ target |用于匹配当前目标对象类型的执行方法；
 <https://github.com/landy8530/DesignPatterns#231-%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F>
 <https://blog.csdn.net/yhl_jxy/article/details/80586785>
 <http://blog.didispace.com/springbootaoplog/>
-

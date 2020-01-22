@@ -1,5 +1,5 @@
 ---
-title: IOC——控制反转
+title: Spring-IOC
 tags: [IOC,DI,Spring]
 categories:
 - Spring
@@ -47,4 +47,3 @@ Spring是典型的贫血模式，通常的三层或者四层架构带来了开�
 ## 参考资料
 [Jdon-IOC](https://www.jdon.com/AOPdesign/Ioc.htm)
 我非常喜欢[解道](https://www.jdon.com)这个网站，面向对象、领域驱动都是我非常感兴趣的方向，我从这个网站学到了很多，也推荐大家去交流学习。
-
