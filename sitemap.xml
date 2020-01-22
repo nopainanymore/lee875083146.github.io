@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://nopainanymore.me/Spring-Injection/</loc>
+    
+    <lastmod>2020-01-22T07:53:50.692Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://nopainanymore.me/Spring-IOC/</loc>
     
     <lastmod>2020-01-22T07:42:53.149Z</lastmod>
@@ -68,13 +75,6 @@
     <loc>http://nopainanymore.me/SpringBoot-Bean-PostOperation/</loc>
     
     <lastmod>2020-01-22T05:47:01.731Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://nopainanymore.me/Spring-Injection/</loc>
-    
-    <lastmod>2020-01-22T05:41:55.513Z</lastmod>
     
   </url>
   
