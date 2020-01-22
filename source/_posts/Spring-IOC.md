@@ -9,6 +9,7 @@ entitle: Spring-IOC
 ---
 
 分离关注（Separation of Concerns）是IOC模式和AOP产生的最原始动力，通过功能分解可得到关注点，这些关注可以是Components，Aspects和Services。
+
 本文将介绍IOC即控制反转。
 
 <!--more-->
