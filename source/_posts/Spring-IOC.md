@@ -8,7 +8,7 @@ date: 2019-08-30 22:59:16
 entitle: Spring-IOC
 ---
 
-分离关注（Separation of Concerns）是IOC模式和AOP产生的最原始动力，通过功能分解可得到关注点，这些关注可以是Components，Aspects和Services。
+分离关注（Separation of Concerns）是IOC模式和AOP产生的最原始动力，通过功能分解可得到关注点，这些关注可以是`Components`，`Aspects`和`Services`。
 
 本文将介绍IOC即控制反转。
 
@@ -33,17 +33,13 @@ IOC的三种类型：
 二|使用JavaBean的setter方法|SpringFramework
 三|构造方法中实现依赖|PicoContainer
 
-
+IOC是一种通用的思想、原则，用于解决调用者与被调用者依赖耦合关系。IOC反转的是依赖，将依赖的获取从调用者转移到了框架，目的是分离关注。DI是IOC的一个特例，允许开发者不需要编码获取外部依赖的实例，由容器将其注入。
 
 ## Spring-IOC与DDD聚合根之间调用的逻辑相悖
 
 在DDD中如果有连个聚合根调用，如果使用IOC，就会发生聚合根嵌套，在DDD中聚合根是对不同领域边界的划分，使用IOC会破坏聚合根在业务上的概念。
 
 Spring是典型的贫血模式，通常的三层或者四层架构带来了开发的快速和便捷，但模糊了业务中领域的概念，在面向对象、领域驱动的观念中，对象、聚合根是对业务的划分，不光包含了数据，还包括了含有其领域行为的方法。Spring中将其转换为层级中的方法，由Service去控制对象的行为，违背了面向对象的思想，在这种模式下对象丧失了其行为，不再是有其生命的对象，而是各层的傀儡。
-
-
-
-
 
 ## 参考资料
 [Jdon-IOC](https://www.jdon.com/AOPdesign/Ioc.htm)
