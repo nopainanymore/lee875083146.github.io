@@ -17,14 +17,15 @@ entitle: Spring-Injection
 
 ## 注入方式
 
+在SpringBoot中Bean注入的方式有以下三种：
+
 * 构造方法注入
 * 成员变量注入
 * setter注入
 
-现在流行的一般是构造方法注入和成员变量两种，那么为什么Spring团队推荐使用构造方法注入呢？在StackOverFlow以及[Oliver Gierke](https://spring.io/team/ogierke)的一篇[博客](http://olivergierke.de/2013/11/why-field-injection-is-evil/)上找到了相关的讨论和分析。
+现在流行的一般是构造方法注入和成员变量两种，那么为什么Spring团队推荐使用构造方法注入呢？
 
-> Oliver Gierke is the lead of the Spring Data project at Pivotal, formerly known as SpringSource, and member of the JPA 2.1 expert group.
-
+收集了在StackOverFlow上的一个问题，[Oliver Gierke](https://spring.io/team/ogierke)的一篇[博客](http://olivergierke.de/2013/11/why-field-injection-is-evil/)以及MartinFowler的[ 一篇博客](https://www.martinfowler.com/articles/injection.html)上找到了相关的讨论和分析。
 
 ## StackOverflow上的讨论
 
@@ -188,13 +189,24 @@ class MyComponent {
 构造方法注入|多|安全|容易测试
 
 
+## MartinFowler
+
+下面是MartinFowler在[Inversion of Control Containers and the Dependency Injection pattern](https://www.martinfowler.com/articles/injection.html)中关于构造方法注入与Setter注入方式的讨论。
+
+> My long running default with objects is as much as possible, to create valid objects at construction time. Constructors with parameters give you a clear statement of what it means to create a valid object in an obvious place.
+> Another advantage with constructor initialization is that it allows you to clearly hide any fields that are immutable by simply not providing a setter.
+> It's true that a long constructor is often a sign of an over-busy object that should be split, but there are cases when that's what you need.
+
+MartinFowler同样认为构造方法注入可以保证创建对象的有效性。同时构造方法注入可以通过不提供setter方法的方式保护不可变对象。同时参数过长的构造方法标志着对象的职责过多需要拆分。
+
+
 ## 总结
 
 > The Spring team generally advocates constructor injection, as it lets you implement application components as immutable objects and ensures that required dependencies are not null. Furthemore, constructor-injected components are always returned to the client(calling) code in a fully initialized state. As a side note, a large number of constructor arguments is a bad code semll, implying that the class likely has too many responsibilities and should be refactored to better address proper separation of concerns.
 
 > Setter injection should primarily only be used for optional dependencies that can be assigned resonable default values within the class. Otherwise, non-null checks must be performed everywhere the code uses the dependency. One bennefit of setter injection is that setter methods make objects of that class amenable to reconfiguration or re-injection later. Management through JMX MBeans is therefore a compelling use case for setter injection.
 
-以上是Spring团队对构造方法注入和setter方法注入的总结。
+以上是Spring团队对构造方法注入和setter方法注入的看法。
 
 Spring团队之所以推荐使用构造方法注入主要是以下几点原因：
 * 通过构造方法，声明依赖，避免了在测试或者其他环境下依赖的缺失
