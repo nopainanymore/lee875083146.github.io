@@ -18,6 +18,7 @@
 <a id="more"></a>
 <h2 id="ioc"><a class="markdownIt-Anchor" href="#ioc"></a> IOC</h2>
 <p>在面向对象理念的指导下，我们已经习惯了面向接口编程，即抽象不应该依赖于具体，具体依赖于抽象，面向接口编程有很多的好处，例如可以提供不同子类的实现，在有新的实现时只需要新增新的类实现目标接口即可，增加代码的稳定性和健壮性。</p>
+<p>问题是：是控制的哪一部分反转了呢？早期的用户接口被应用程序控制。你必须有一系列的命令例如：输入你的名字、输入你的地址等，你的程序将带着这些提示然后获取每一个的结果。带有UI图形的框架包含一个主循环，你的程序作为替代将为每一个屏幕上的变量提供事件处理器。程序的主要控制被反转了，从你转移到了框架。 ——翻译自<a href="https://www.martinfowler.com/articles/injection.html" target="_blank" rel="noopener">Inversion of Control Containers and the Dependency Injection pattern - MartinFowler</a></p>
 <p>但接口的实现是必须要执行的，即代码在执行的时候必须是有具体实现的，那么我们接口的实现类必须在执行前的某一时刻注入到依赖它的类中。</p>
 <p>IOC——Inversion of Control，即控制反转，就是解决类与接口依赖关系的一种方式，面向对象的思想中，为了降低耦合，常常引入第三方去协调，新的IOC模式DI（Dependency Injection）依赖注入，就是将类之间的关系通过第三方进行注入，不需要类自己去解决调用关系。高层次模块不应该依赖低层次模块，他们应该依赖于一种抽象，且这种抽象不应该依赖细节，细节应该依赖于抽象。</p>
 <p>DI将实现调用者和被调用者解耦，将依赖先剥离，在适当的时候进行注入。即开发者只需要关心接口的交互，不需要关心调用者如何获取被调用者的具体实例。</p>
@@ -54,8 +55,7 @@
 <p>在DDD中如果有连个聚合根调用，如果使用IOC，就会发生聚合根嵌套，在DDD中聚合根是对不同领域边界的划分，使用IOC会破坏聚合根在业务上的概念。</p>
 <p>Spring是典型的贫血模式，通常的三层或者四层架构带来了开发的快速和便捷，但模糊了业务中领域的概念，在面向对象、领域驱动的观念中，对象、聚合根是对业务的划分，不光包含了数据，还包括了含有其领域行为的方法。Spring中将其转换为层级中的方法，由Service去控制对象的行为，违背了面向对象的思想，在这种模式下对象丧失了其行为，不再是有其生命的对象，而是各层的傀儡。</p>
 <h2 id="参考资料"><a class="markdownIt-Anchor" href="#参考资料"></a> 参考资料</h2>
-<p><a href="https://www.jdon.com/AOPdesign/Ioc.htm" target="_blank" rel="noopener">Jdon-IOC</a><br>
-我非常喜欢<a href="https://www.jdon.com" target="_blank" rel="noopener">解道</a>这个网站，面向对象、领域驱动都是我非常感兴趣的方向，我从这个网站学到了很多，也推荐大家去交流学习。</p>
+<p><a href="https://www.jdon.com/AOPdesign/Ioc.htm" target="_blank" rel="noopener">https://www.jdon.com/AOPdesign/Ioc.htm</a></p>
 </div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">nopainanymore</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://nopainanymore.me/Spring-IOC/">http://nopainanymore.me/Spring-IOC/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/IOC/">IOC</a><a class="post-meta__tags" href="/tags/DI/">DI</a><a class="post-meta__tags" href="/tags/Spring/">Spring</a></div><div class="post-qr-code"><div class="post-qr-code-item"><img class="post-qr-code__img" src="https://nopainanymore.oss-cn-hangzhou.aliyuncs.com/wechat.jpg?x-oss-process=style/sw-white"><div class="post-qr-code__desc">wechat</div></div></div><div class="social-share" data-disabled="diandian,tencent,qzone,google"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><nav id="pagination"><div class="prev-post pull-left"><a href="/Blog-Hexo-Configuration/"><i class="fa fa-chevron-left">  </i><span>Hexo配置</span></a></div><div class="next-post pull-right"><a href="/DesignPattern-Factory/"><span>设计模式——工厂模式</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="gitalk-container"></div><script>var gitalk = new Gitalk({
   clientID: 'b5808ee24dc05257f520',
   clientSecret: '4b96b67ee846f12c0c590dfd71312ba19edea774',
