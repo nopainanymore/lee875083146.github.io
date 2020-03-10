@@ -13,7 +13,7 @@ entitle: Spring-Injection
 
 之前一直都是用构造方法注入，现在的项目中很多都是成员变量注入，Spring的依赖注入有三种形式，当使用成员变量注入时，IDEA将会有以下提示，为什么Spring团队推荐使用构造方法注入呢？本文将探讨一下这个问题。
 
-[!Spring-Team—Recommend](https://nopainanymore.oss-cn-hangzhou.aliyuncs.com/Spring/%E6%88%AA%E5%B1%8F2020-01-2011.01.24.png?x-oss-process=style/sw-white)
+![Spring-Team—Recommend](https://nopainanymore.oss-cn-hangzhou.aliyuncs.com/Spring/%E6%88%AA%E5%B1%8F2020-01-2011.01.24.png?x-oss-process=style/sw-white)
 
 ## 注入方式
 
