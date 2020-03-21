@@ -2,23 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://nopainanymore.me/Java-Concurrency-CAS/</loc>
+    <loc>http://nopainanymore.me/DesignPattern-Singleton/</loc>
     
-    <lastmod>2020-01-29T14:37:49.390Z</lastmod>
+    <lastmod>2020-03-21T12:15:31.951Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://nopainanymore.me/Spring-Injection/</loc>
     
-    <lastmod>2020-01-24T15:10:40.570Z</lastmod>
+    <lastmod>2020-02-20T04:07:46.710Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://nopainanymore.me/Spring-IOC/</loc>
     
-    <lastmod>2020-01-24T05:29:04.366Z</lastmod>
+    <lastmod>2020-01-29T14:50:53.333Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://nopainanymore.me/Java-Concurrency-CAS/</loc>
+    
+    <lastmod>2020-01-29T14:37:49.390Z</lastmod>
     
   </url>
   
@@ -373,13 +380,6 @@
   </url>
   
   <url>
-    <loc>http://nopainanymore.me/DesignPattern-Singleton/</loc>
-    
-    <lastmod>2019-11-02T15:40:31.055Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://nopainanymore.me/Cache-ProblemSolution/</loc>
     
     <lastmod>2019-11-02T07:36:25.596Z</lastmod>
@@ -450,63 +450,7 @@
   </url>
   
   <url>
-    <loc>http://nopainanymore.me/DTO-Understanding/</loc>
-    
-    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://nopainanymore.me/Java8-Stream-Introduction/</loc>
-    
-    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://nopainanymore.me/CleanCode-Bloated/</loc>
-    
-    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://nopainanymore.me/Markdown-Grammer/</loc>
-    
-    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://nopainanymore.me/Java-IO-Stream/</loc>
-    
-    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://nopainanymore.me/Java8-Stream-usage/</loc>
-    
-    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://nopainanymore.me/IDEA-Settings/</loc>
-    
-    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://nopainanymore.me/Catch-Exceprion-In-Lambda/</loc>
-    
-    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://nopainanymore.me/Java-ClassLoader/</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
     
@@ -520,7 +464,14 @@
   </url>
   
   <url>
-    <loc>http://nopainanymore.me/Markdowm-Flow/</loc>
+    <loc>http://nopainanymore.me/Embrace-Lombok/</loc>
+    
+    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://nopainanymore.me/DTO-Understanding/</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
     
@@ -534,7 +485,28 @@
   </url>
   
   <url>
-    <loc>http://nopainanymore.me/AbstractClassInterface-Understanding/</loc>
+    <loc>http://nopainanymore.me/Recently-20190806/</loc>
+    
+    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://nopainanymore.me/Catch-Exceprion-In-Lambda/</loc>
+    
+    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://nopainanymore.me/CleanCode-Bloated/</loc>
+    
+    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://nopainanymore.me/Markdowm-Flow/</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
     
@@ -548,7 +520,14 @@
   </url>
   
   <url>
-    <loc>http://nopainanymore.me/Embrace-Lombok/</loc>
+    <loc>http://nopainanymore.me/Java8-Stream-usage/</loc>
+    
+    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://nopainanymore.me/Java8-Stream-Introduction/</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
     
@@ -562,6 +541,27 @@
   </url>
   
   <url>
+    <loc>http://nopainanymore.me/AbstractClassInterface-Understanding/</loc>
+    
+    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://nopainanymore.me/Java-IO-Stream/</loc>
+    
+    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://nopainanymore.me/Markdown-Grammer/</loc>
+    
+    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://nopainanymore.me/archives/index.html</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
@@ -569,7 +569,14 @@
   </url>
   
   <url>
-    <loc>http://nopainanymore.me/Recently-20190806/</loc>
+    <loc>http://nopainanymore.me/Java-ClassLoader/</loc>
+    
+    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://nopainanymore.me/tags/index.html</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
     
@@ -584,13 +591,6 @@
   
   <url>
     <loc>http://nopainanymore.me/learningPlan/index.html</loc>
-    
-    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://nopainanymore.me/tags/index.html</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
     
