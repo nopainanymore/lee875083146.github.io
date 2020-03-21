@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://nopainanymore.me/DesignPattern-Vistor/</loc>
+    
+    <lastmod>2020-03-21T15:33:00.155Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://nopainanymore.me/Recently-20190806/</loc>
     
     <lastmod>2020-03-21T12:45:18.174Z</lastmod>
@@ -257,13 +264,6 @@
     <loc>http://nopainanymore.me/Building-Microservices-Microservices/</loc>
     
     <lastmod>2019-11-13T03:43:54.305Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://nopainanymore.me/DesignPattern-Vistor/</loc>
-    
-    <lastmod>2019-11-13T03:11:17.420Z</lastmod>
     
   </url>
   
@@ -569,14 +569,14 @@
   </url>
   
   <url>
-    <loc>http://nopainanymore.me/archives/index.html</loc>
+    <loc>http://nopainanymore.me/categories/index.html</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://nopainanymore.me/categories/index.html</loc>
+    <loc>http://nopainanymore.me/archives/index.html</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
     
