@@ -1,5 +1,5 @@
 ---
-title: readingPlan
+title: ReadingPlan
 date: 2019-03-12 23:24:19
 ---
 
