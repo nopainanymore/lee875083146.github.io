@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://nopainanymore.me/null/</loc>
+    
+    <lastmod>2020-04-21T13:06:00.204Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://nopainanymore.me/CleanCode/</loc>
     
     <lastmod>2020-03-29T13:03:13.012Z</lastmod>
@@ -576,14 +583,14 @@
   </url>
   
   <url>
-    <loc>http://nopainanymore.me/Java-IO-Stream/</loc>
+    <loc>http://nopainanymore.me/categories/index.html</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://nopainanymore.me/categories/index.html</loc>
+    <loc>http://nopainanymore.me/Java-IO-Stream/</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
     
