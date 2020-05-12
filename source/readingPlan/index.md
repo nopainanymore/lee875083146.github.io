@@ -11,23 +11,29 @@ date: 2019-03-12 23:24:19
 -|-
 Java并发编程实战|<https://book.douban.com/subject/10484692/>
 深入理解Java虚拟机|<https://book.douban.com/subject/34907497/>
-微服务设计|<https://book.douban.com/subject/26772677/>
 领域驱动设计|<https://book.douban.com/subject/26819666/>
-CleanCode|<https://book.douban.com/subject/4199741/>
 对象设计：角色、责任和协作|<https://book.douban.com/subject/1801044/>
-
+云原生Java|<https://book.douban.com/subject/30270037/>
+敏捷软件开发|<https://book.douban.com/subject/1140457/>
 ## Have Read
 
 书名|豆瓣链接|时间
 -|-|-
 Java并发编程的艺术|<https://book.douban.com/subject/26591326/>|2019
 Java8实战|<https://book.douban.com/subject/26772632/>|2020-03
+微服务设计|<https://book.douban.com/subject/26772677/>|2020-04
+CleanCode|<https://book.douban.com/subject/4199741/>|2020-04
+程序员修炼之道|<https:book.douban.com/subject/35006892>|2020-05
 
 
 ## To Read
 
 书名|豆瓣链接
 -|-
+计算机程序的构造与解释|<https://book.douban.com/subject/34464721/>
+面向对象编程导论|<https://book.douban.com/subject/1271329/>
+UML用户指南|<https://book.douban.com/subject/1837454/>
+领域特定语言|<https://book.douban.com/subject/21964984/>
 TCP/IP详解|<https://book.douban.com/subject/26825411/>
 Netty实战|<https://book.douban.com/subject/27038538/>
 Netty进阶之路|<https://book.douban.com/subject/30381214/>
