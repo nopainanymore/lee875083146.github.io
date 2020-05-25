@@ -204,3 +204,9 @@ Git将`foo~1`解析成一个`origin`仓库的位置，然后将那些提交记�
 
 `git push origin :side`
 `push`**空**`<source>`到远程仓库，它会删除远程仓库中的分支。
+
+## gitignore
+
+1. 清除tracked缓存`git rm -r --cached .`
+2. 重新添加文件`git add .`
+3. 最后需要提交`git commit -m ".gitignore is now working"`
