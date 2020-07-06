@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://nopainanymore.me/Overview-Of-Distributed-Consensus/</loc>
+    
+    <lastmod>2020-07-06T14:58:32.168Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://nopainanymore.me/The-Your-Journey-To-Mastery-Pragmatic-Programmer/</loc>
+    
+    <lastmod>2020-07-06T14:26:56.990Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://nopainanymore.me/Git/</loc>
     
     <lastmod>2020-05-25T13:45:19.329Z</lastmod>
@@ -12,13 +26,6 @@
     <loc>http://nopainanymore.me/readingPlan/index.html</loc>
     
     <lastmod>2020-05-12T03:30:38.619Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://nopainanymore.me/null/</loc>
-    
-    <lastmod>2020-05-12T03:19:38.524Z</lastmod>
     
   </url>
   
@@ -492,49 +499,7 @@
   </url>
   
   <url>
-    <loc>http://nopainanymore.me/Embrace-Lombok/</loc>
-    
-    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://nopainanymore.me/DTO-Understanding/</loc>
-    
-    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://nopainanymore.me/Markdown-Sequence/</loc>
-    
-    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://nopainanymore.me/CleanCode-Bloated/</loc>
-    
-    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://nopainanymore.me/Catch-Exceprion-In-Lambda/</loc>
-    
-    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://nopainanymore.me/Markdowm-Flow/</loc>
-    
-    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://nopainanymore.me/Recently-20190709/</loc>
+    <loc>http://nopainanymore.me/AbstractClassInterface-Understanding/</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
     
@@ -548,6 +513,27 @@
   </url>
   
   <url>
+    <loc>http://nopainanymore.me/Recently-20190709/</loc>
+    
+    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://nopainanymore.me/IDEA-Settings/</loc>
+    
+    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://nopainanymore.me/Catch-Exceprion-In-Lambda/</loc>
+    
+    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://nopainanymore.me/Java8-Stream-Introduction/</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
@@ -555,21 +541,14 @@
   </url>
   
   <url>
-    <loc>http://nopainanymore.me/Java-Lock/</loc>
+    <loc>http://nopainanymore.me/DTO-Understanding/</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://nopainanymore.me/Java-ClassLoader/</loc>
-    
-    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://nopainanymore.me/AbstractClassInterface-Understanding/</loc>
+    <loc>http://nopainanymore.me/Markdowm-Flow/</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
     
@@ -590,21 +569,28 @@
   </url>
   
   <url>
+    <loc>http://nopainanymore.me/Embrace-Lombok/</loc>
+    
+    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://nopainanymore.me/Java-ClassLoader/</loc>
+    
+    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://nopainanymore.me/Java-Lock/</loc>
+    
+    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://nopainanymore.me/archives/index.html</loc>
-    
-    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://nopainanymore.me/tags/index.html</loc>
-    
-    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://nopainanymore.me/IDEA-Settings/</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
     
@@ -618,7 +604,28 @@
   </url>
   
   <url>
+    <loc>http://nopainanymore.me/Markdown-Sequence/</loc>
+    
+    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://nopainanymore.me/SpringBoot-HandlerMethodArgumentResolver/</loc>
+    
+    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://nopainanymore.me/tags/index.html</loc>
+    
+    <lastmod>2019-08-15T14:30:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://nopainanymore.me/CleanCode-Bloated/</loc>
     
     <lastmod>2019-08-15T14:30:56.000Z</lastmod>
     
