@@ -102,7 +102,9 @@ public class Pet {
 ### 错误使用方式
 
 很多人在使用Optional时，先使用`isPresent()`判断Optional中是否为null，然后调用`get()`方法获取，但这样和原先`== null`没有任何区别，并不是Java8中Optional的正确使用姿势。
+
 错误使用方式：
+
 ```java
 Optional<Student> studentOpt = Optional.ofNullable(student);
         if (studentOpt.isPresent()) {
@@ -111,6 +113,7 @@ Optional<Student> studentOpt = Optional.ofNullable(student);
             System.out.println("student is null");
         }
 ```
+
 ### 正确使用姿势
 
 #### orElse、orElseGet、orElseThrow

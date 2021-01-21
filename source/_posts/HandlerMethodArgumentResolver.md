@@ -8,17 +8,18 @@ categories:
 date: 2019-05-14 22:52:37
 ---
 
-
-
 本文介绍SpringBoot中如何自定义HandlerMethodArgumentResolver以及怎样对对应的Controller进行单测。
 
 <!--more-->
 
 ## HandlerMethodArgumentResolver
+
 `HandlerMethodArgumentResolver`，是一个策略接口，目的是将给定Request中的方法参数解析为给定请求的上下文中的参数值。即可以自定义Request方法中的数据绑定，比如可以将用户信息置于session中，通过实现`HandlerMethodArgumentResolver`接口，实现session中数据和代码中的类进行数据绑定。
+
 > Strategy interface for resolving method parameters into argument values in the context of a given request.
 
 User类，Session中“user”`Attribute`对应程序中的类。
+
 ```java
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -86,15 +87,18 @@ public class ResolverController {
 ```
 
 `UserArgumentResolver`自定义`HandlerMethodArgumentResolver`，其中有两个方法。
+
 ```java
 boolean supportsParameter(MethodParameter methodParameter)
 ```
+
 入参为`MethodParameter`用来判断该`Resolver`是否支持该方法。下面的例子中当方法参数中带有`LoginUser`注解时返回`true`。
 
 ```java
 Object resolveArgument(MethodParameter parameter, @Nullable ModelAndViewContainer mavContainer,
 			NativeWebRequest webRequest, @Nullable WebDataBinderFactory binderFactory) throws Exception;
 ```
+
 当`supportsParameter`方法返回值为`true`时，执行该方法。本例中判断了`session`中是否有“user”的`Attribute`，如果没有则添加一个，如果有则直接返回。
 
 ```java
@@ -148,6 +152,7 @@ public class UserArgumentResolver implements HandlerMethodArgumentResolver {
 ```
 
 ## 配置Resolver生效
+
 新增配置类实现`WebMvcConfigurer`将自定义的`UserArgumentResolver`添加到	`HandlerMethodArgumentResolver`List中，使其生效。
 
 ```java
@@ -171,6 +176,7 @@ public class UserConfig implements WebMvcConfigurer {
 ```
 
 ## 如何使用MockMvc对自定义Resolver进行单测
+
 在进行单元测试时，需要将自定义的`Resolvers`添加到`MockMvc`中。
 
 ```java
@@ -204,9 +210,10 @@ public class ResolverControllerTest {
                 .contentType(MediaType.APPLICATION_JSON)
                 .session(session)).andExpect(status().isOk());
     }
-    
+
 }
 ```
 
 ## 参考资料
+
 <https://sdqali.in/blog/2016/01/30/using-custom-arguments-in-spring-mvc-controllers/>

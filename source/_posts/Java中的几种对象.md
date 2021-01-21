@@ -8,7 +8,8 @@ date: 2019-08-16 22:16:19
 entitle: Java-POJO
 ---
 
-介绍Java中的POJO对象，
+介绍Java中的POJO对象。
+
 <!--more-->
 
 ## POJO的起源
@@ -28,6 +29,7 @@ POJO——Plain Old Java Object，是一个简单普通的Java对象，不被任
 3. POJO不能被预先制定的注解标注
 
 但是由于技术困难和其他一些原因，一些被称为符合POJO的软件产品或者框架仍然需要为了某些特性使用预先指定的一些注解，例如持久化等功能。所以如果在被任何注解注释前一个类是一个POJO对象，并且这个类在移除注解之后仍然能够被视作一个POJO。那么基本对象仍是POJO，因为它没有特殊的特性使其成为专用的Java对象。
+
 ><https://en.wikipedia.org/wiki/Plain_old_Java_object>
 >Ideally speaking, a POJO is a Java object not bound by any restriction other than those forced >by the Java Language Specification; i.e. a POJO should **not** have to
 >Extend prespecified classes, as in
@@ -65,8 +67,6 @@ BO——Business Object，用于表示一个业务对象，BO中包括了业务�
 ## 总结
 
 对于这些对象，个人认为没有必要去纠结，更多的应该对业务本身进行分析建模，划分业务中的对象。
-
-
 
 ## 参考资料
 <https://en.wikipedia.org/wiki/Plain_old_Java_object>

@@ -10,7 +10,9 @@ date: 2019-05-08 23:37:49
 ---
 
 Lambda中捕捉异常，会导致代码的膨胀，违反了Lambda设计的原则，同时也是Java FunctionalInterface设计的缺陷。
+
 <!--more-->
+
 ## 在Lambad中捕捉异常
 
 ```java
@@ -30,9 +32,8 @@ Lambda中捕捉异常，会导致代码的膨胀，违反了Lambda设计的原�
 ```
 
 
-
-
 ## 引入工具类
+
 ```java
 public final class LambdaExceptionUtil {
 
@@ -121,12 +122,15 @@ public final class LambdaExceptionUtil {
 ## 如何使用
 
 引入工具类之前：
+
 ![LambdaExceptionBefore](https://nopainanymore.oss-cn-hangzhou.aliyuncs.com/java8/LambdaExceptionBefore.png?x-oss-process=style/sw-white "LambdaExceptionBefore")
 
 引入工具类之后：
+
 ![LambdaExceptionAfter](https://nopainanymore.oss-cn-hangzhou.aliyuncs.com/java8/LambdaExceptionAfter.png?x-oss-process=style/sw-white "LambdaExceptionAfter")
 
 代码：
+
 ```java
 import java.util.ArrayList;
 import java.util.List;
@@ -149,7 +153,7 @@ public class LambdaExceptionExample {
         List<? extends Class<?>> collect = clazzNameList.stream().map(clazz -> Class.forName(clazz)).collect(Collectors.toList());
 
         List<? extends Class<?>> collect1 = clazzNameList.stream().map(LambdaExceptionUtil.rethrowFunction(clazz -> Class.forName(clazz))).collect(Collectors.toList());
-        
+
 
     }
 }

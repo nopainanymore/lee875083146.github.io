@@ -10,7 +10,6 @@ entitle: Blog-Hexo-Configuration
 
 总结下Hexo**迁移**到新的电脑时需要的配置流程。
 
-
 <!--more-->
 
 hexo 依赖`git`和`nodejs`确保使用前两者已经安装。

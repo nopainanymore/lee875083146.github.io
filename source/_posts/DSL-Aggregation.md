@@ -15,16 +15,18 @@ DSL中聚合的基础概念。
 ## 基础概念
 
 ### 桶
+
 满足特定条件的文档的集合。
 聚合开始执行的时候，每个文档里面的值通过计算来决定符合哪个桶的条件。如果匹配到，文档将放入相应的桶并接着进行聚合操作。
 桶也可以被嵌套在其他桶里面，提供层次化的或者有条件的划分方案。
 
 ### 指标
+
 桶能让我们划分文档到有意义的集合， 但是最终我们需要的是对这些桶内的文档进行一些指标的计算。分桶是一种达到目的的手段：它提供了一种给文档分组的方法来让我们可以计算感兴趣的指标。
 
 ### 聚合
-聚合是由桶和指标组成的。 聚合可能只有一个桶，可能只有一个指标，或者可能两个都有。也有可能有一些桶嵌套在其他桶里面。
 
+聚合是由桶和指标组成的。 聚合可能只有一个桶，可能只有一个指标，或者可能两个都有。也有可能有一些桶嵌套在其他桶里面。
 
 ## 尝试聚合
 
@@ -33,7 +35,7 @@ DSL中聚合的基础概念。
 GET /cars/transactions/_search
 {
     "size" : 0,
-    "aggs" : { 
+    "aggs" : {
         "popular_colors" : {	①
             "terms" : {		②
               "field" : "color"
@@ -54,14 +56,14 @@ GET /cars/transactions/_search
 {
 ...
    "hits": {
-      "hits": [] 
+      "hits": []
    },
    "aggregations": {
-      "popular_colors": { 
+      "popular_colors": {
          "buckets": [
             {
-               "key": "red", 
-               "doc_count": 4 
+               "key": "red",
+               "doc_count": 4
             },
             {
                "key": "blue",
@@ -82,7 +84,9 @@ GET /cars/transactions/_search
 * 每个桶的数量代表该颜色的文档数量
 
 ### 添加度量指标
+
 为了获取复杂的文档度量，我们需要指定度量使用的指标和计算方法，复杂聚合需要将度量嵌套在桶中，度量会基于桶内的文档计算统计结果。
+
 ```
 GET /cars/transactions/_search
 {
@@ -224,7 +228,7 @@ GET /cars/transactions/_search
 * ②每种颜色下按照不同生产商分解的车辆信息
 * ③avg度量仍然维持不变
 
-## 
+##
 
 
 ```
@@ -274,10 +278,10 @@ GET /cars/transactions/_search
                         "key": "honda",
                         "doc_count": 3,
                         "min_price": {
-                           "value": 10000 
+                           "value": 10000
                         },
                         "max_price": {
-                           "value": 20000 
+                           "value": 20000
                         }
                      },
                      {
@@ -298,10 +302,3 @@ GET /cars/transactions/_search
             },
 ...
 ```
-
-
-
-
-
-
-

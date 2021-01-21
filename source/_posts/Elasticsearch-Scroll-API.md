@@ -10,6 +10,7 @@ entitle: Elasticsearch-SearchScroll-API
 ---
 
 Elasticsearch SearchScroll 笔记。
+
 <!--more-->
 
 Elasticsearch SearchScroll 可以用在查询数据量较大的情况。
@@ -28,7 +29,6 @@ Elasticsearch SearchScroll 可以用在查询数据量较大的情况。
     String scrollId = searchResponse.getScrollId();
     SearchHits hits = searchResponse.getHits();
 ```
-
 
 ## Retrieve all the relevent documents
 

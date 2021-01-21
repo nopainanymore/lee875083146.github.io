@@ -13,6 +13,7 @@ Mac终端配置和软件推荐。
 <!--more-->
 
 brew 和oh my zsh 安装或许需要设置代理。
+
 ## brew
 
 Mac 包管理工具。
@@ -24,6 +25,7 @@ Mac 包管理工具。
 
 作用：
 安装任意包。
+
 ```bash
 安装任意包
 $ brew install <packageName>

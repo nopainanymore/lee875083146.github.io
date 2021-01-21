@@ -15,6 +15,7 @@ date: 2019-05-13 21:34:11
 Spring推荐通过DI依赖注入来获取Bean的引用，在一些特殊场景，我们希望直接通过类或者类名获取到ApplicationContext中的Bean，就用到了下面的工具类。
 
 ## Code
+
 ```java
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeansException;

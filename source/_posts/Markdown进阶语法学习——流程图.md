@@ -7,23 +7,29 @@ categories:
     - 博客搭建
     - Markdown
 ---
+
 介绍如何使用Markdown绘制流程图。
+
 <!--more-->
+
 ## 注意
+
 Hexo原生是不支持Markdown的流程图语法的。
 执行以下命令以支持流程图。
+
 ```
 npm install --save hexo-filter-flowchart
 ```
 
-
 ## 步骤及语法
 
 ### 步骤
+
 1. 定义流程图的元素
 2. 连接流程图元素
 
 ### 语法
+
 1. 定义阶段语法
 `tag=>type: content :>url`
 * tag：流程图中的标签，即元素的名称，在连接阶段指定连接顺序
@@ -49,6 +55,7 @@ inputoutput|输入输出
 ## 例子
 
 ###  生成后的流程图
+
 ```flow
 start=>start: 开始
 input1=>inputoutput: 请输入密码
@@ -62,7 +69,6 @@ con1(no)->end
 ```
 
 ### 流程图Markdown代码
-
 
 	···flow(由于渲染问题请将·替换为\`)
 	start=>start: 开始

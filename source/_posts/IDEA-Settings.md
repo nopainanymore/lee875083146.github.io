@@ -1,6 +1,6 @@
 ---
 title: IDEA Settings
-entitle: IDEA-Settings 
+entitle: IDEA-Settings
 tags: [IDEA]
 categories:
   - IDEA
@@ -10,6 +10,7 @@ date: 2019-04-14 22:51:07
 <!--more-->
 
 ## Plugins
+
 CodeGlance
 FindBugs
 Grep Console
