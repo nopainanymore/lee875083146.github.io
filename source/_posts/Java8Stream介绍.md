@@ -13,10 +13,8 @@ Java 8中的Stream是对集合对象功能的增强，Stream专注于对集合�
 <!--more-->
 # Stream介绍
 
-
 ## 概念
 Stream 并不是某种数据结构，它只是数据源的一种视图，是对集合进行操作的函数管道。
-
 
 ## 特点及优点
 
@@ -31,12 +29,10 @@ Stream 并不是某种数据结构，它只是数据源的一种视图，是对�
 * Stream采用惰性计算，使程序非常高效。
 * Stream支持并行，只需调用 `parallel()`方法。
 
-
 ## 创建
 * 调用`Collection.stream()`或者`Collection.parallelStream()`方法
 * 调用`Arrays.stream(T[] array)`方法
-* Stream类的静态工厂方法`Stream.of(Object[]), IntStream.range(int, int)， Stream.iterate(Object, UnaryOperator);` 
-
+* Stream类的静态工厂方法`Stream.of(Object[]), IntStream.range(int, int)， Stream.iterate(Object, UnaryOperator);`
 
 ## 操作
 对Stream的操作分为两类，中间操作(intermediate operations)和结束操作(terminal operations)
@@ -57,13 +53,14 @@ Stream 并不是某种数据结构，它只是数据源的一种视图，是对�
 非短路|处理完所以数据才能得到结果|`collect()、count()、forEach()、forEachOrdered()、max()、min()、reduce()、toArray()`等
 短路|拿到符合预期的结果就会停下来，不一定会处理完所有数据|`anyMatch()、allMatch()、noneMatch()、findFirst()、findAny() `等
 
-
 ## 惰性计算
+
 Stream累积并组合或融合中间操作，然后执行他们。Stream不会像命令式代码一样一个一个执行数据集上的每个函数，而是执行每个元素上的函数的融合集合，仅在需要时执行。
 
-
 ## 函数接口及函数纯度
+
 Stream集合管道中的所有lambda表达式和闭包都必须是纯的。
+
 ### 纯函数
 
 纯函数是幂等的— 这意味着对纯函数的调用次数没有限制。其次，无论调用纯函数多少次，只要给定相同的输入，它都会产生相同的结果。第三，纯函数没有副作用：无论您使用它做什么，纯函数都不会更改您的程序中的其他任何元素。
