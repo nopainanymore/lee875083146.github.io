@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://nopainanymore.me/null/</loc>
-    <lastmod>2021-02-20</lastmod>
+    <loc>http://nopainanymore.me/Spring-AOP/</loc>
+    <lastmod>2021-02-24</lastmod>
   </url>
   <url>
     <loc>http://nopainanymore.me/DDD-understanding/</loc>
@@ -50,10 +50,6 @@
   </url>
   <url>
     <loc>http://nopainanymore.me/SpringBoot-ApplicationContext-Bean-Util/</loc>
-    <lastmod>2021-01-21</lastmod>
-  </url>
-  <url>
-    <loc>http://nopainanymore.me/Spring-AOP/</loc>
     <lastmod>2021-01-21</lastmod>
   </url>
   <url>
