@@ -1,5 +1,5 @@
 ---
-title: Spring-AOP实现原理
+title: AOP与Spring-AOP
 entitle: Spring-AOP
 tags: [Spring,SpringBoot,AOP]
 categories:
@@ -10,6 +10,7 @@ date: 2019-05-04 14:26:30
 
 Spring AOP实现原理学习及如何在SpringBoot中使用。
 [Github代码地址](https://github.com/Lee875083146/deep-in-spring)
+
 <!--more-->
 
 ## AOP简介、用处
@@ -22,13 +23,24 @@ AOP的出现解决外围业务代码与核心业务代码分离的问题，OOP�
 
 ## AOP中的概念
 
-使用`aspect`关键字声明一个类，这个类就是一个**切面**。在切面类内部使用`pointcut`定义**切点**，切点即为哪些需要应用切面的方法，比如在某些方法执行的前后进行功能代码的执行，首先需要捕捉这些方法，而pointcut就是用来定义这些需要捕捉的方法(目标方法)。**通知**(advice)即需要在目标方法前后执行的函数，通知有一下五种类型。
+**Pointcut**：是一组基于正则表达式的表达式。通常一个pointcut会选择程序中的某些执行点，或执行点的集合。
+
+**JoinPoint**：通过pointcut选取出来的集合中具体的一个执行点
+
+**Advice**：在选取出来的JoinPoint上要执行的操作、逻辑，通知有以下五种类型。
 
 * `before`目标方法执行前执行，前置通知
 * `after`目标方法执行后执行，后置通知
 * `after returning`目标方法返回时通知，后置返回通知
 * `after throwing`目标方法抛出异常时执行，异常通知
 * `around`在目标函数执行中执行，可控制目标函数是否执行(通过proceed)，环绕通知
+
+**Aspect**：就是我们关注点的模块化。这个关注点可能会横切多个对象和模块，事务管理是横切关注点的很好的例子。是一个抽象的概念，从软件的角度来说是指在应用程序不同模块中的某一个领域或方面。由pointcut 和advice组成。
+
+**Weaving**：把切面应用到目标对象并创建新的代理对象的过程。切面在指定的连接点被织入到目标对象。在目标对象的生命周期里有多个点可以进行织入：
+* 编译期：切面在目标类编译时被织入。Aspect的织入编译器就是以这种方式织入切面的。
+* 类加载期：切面在目标类加载到JVM时被织入。需要特殊的类加载(Classloader)，它可以在目标类被引入之前增强该目标类的字节码(CGlib)
+* 运行期：切面在应用运行时的某个时刻被织入。AOP会为目标对象创建一个代理对象
 
 ## AspectJ
 
@@ -44,7 +56,7 @@ AspectJ采用静态织入的方式。主要采用的是编译期织入，在这�
 
 ## Spring AOP
 
-pring AOP 与ApectJ 的目的一致，都是为了统一处理横切业务，但与AspectJ不同的是，Spring AOP 并不尝试提供完整的AOP功能，Spring AOP 更注重的是与Spring IOC容器的结合，并结合该优势来解决横切业务的问题，因此在AOP的功能完善方面，相对来说AspectJ具有更大的优势，同时,Spring采用动态代理技术的实现原理来构建Spring AOP的内部机制，这是与AspectJ最根本的区别。
+Spring AOP 与ApectJ 的目的一致，都是为了统一处理横切业务，但与AspectJ不同的是，Spring AOP 并不尝试提供完整的AOP功能，**Spring AOP 更注重的是与Spring IOC容器的结合**，并结合该优势来解决横切业务的问题，因此在AOP的功能完善方面，相对来说AspectJ具有更大的优势，同时，Spring采用动态代理技术的实现原理来构建Spring AOP的内部机制，这是与AspectJ最根本的区别。
 
 ### 动态代理
 
@@ -112,7 +124,9 @@ public class JDKProxy implements InvocationHandler {
 所以对代理方法的调用都是通InvocationHadler的invoke来实现中，而invoke方法根据传入的代理对象，方法和参数来决定调用代理的哪个方法。
 
 ### CGLIB动态代理
+
 CGLIB动态代理基于继承的方式实现，免去了接口的实现。
+
 ```java
 @Slf4j
 public class EClass {
@@ -164,7 +178,20 @@ public class CGLibProxy implements MethodInterceptor {
 ```
 
 CGLibProxy代理类需要实现一个方法拦截器接口`MethodInterceptor`并重写`intercept`方法，类似JDK动态代理的`InvocationHandler`接口，也是理解为回调函数，同理每次调用代理对象的方法时，`intercept`方法都会被调用，利用该方法便可以在运行时对方法执行前后进行动态增强。代理对象创建则通过`Enhancer`类来设置的，`Enhancer`是一个用于产生代理对象的类，作用类似JDK的Proxy类，因为CGLib底层是通过继承实现的动态代理，因此需要传递目标对象的Class，同时需要设置一个回调函数对调用方法进行拦截并进行相应处理，最后通过create()创建目标对象的代理对象。
-在Spring AOP中，当有接口时会自动选择JDK动态代理技术，如果没有则选择CGLIB技术
+
+在Spring AOP中，当有接口时会自动选择JDK动态代理技术，如果没有则选择CGLIB技术。
+
+## AspectJ 与 Spring AOP对比
+
+AspectJ和Spring AOP都是对目标类增强，生成代理类。
+
+AspectJ是编译期增强，而SpringAOP是运行时增强。
+
+AspectJ是在编译期间将切面代码编译到目标代码的，属于静态代理；Spring AOP是在运行期间通过代理生成目标类，属于动态代理。
+
+AspectJ是静态代理，故而能够切入final修饰的类，abstract修饰的类；Spring AOP是动态代理，其实现原理是通过CGLIB生成一个继承了目标类(委托类)的代理类，因此，final修饰的类不能被代理，同样static和final修饰的方法也不会代理，因为static和final方法是不能被覆盖的。在CGLIB底层，其实是借助了ASM这个非常强大的Java字节码生成框架。关于CGLB和ASM的讨论将会新开一个篇幅探讨。
+
+Spring AOP支持注解，在使用@Aspect注解创建和配置切面时将更加方便。而使用AspectJ，需要通过.aj文件来创建切面，并且需要使用ajc（Aspect编译器）来编译代码。
 
 ## SpringBoot 中使用AOP
 
